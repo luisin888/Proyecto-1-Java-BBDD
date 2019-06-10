@@ -10,6 +10,7 @@ public class Pelicula {
 	private Categorias categoria;
 	//private int prueba;
 	
+	
 	public String getNombre() {
 		return nombre;
 	}

@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class ConexionDB {
 	//BBDD
     Connection connection = null;
-    String BD = "tablas_de_prueba";
+    String BD = "peliculas";
     String driverClassName = "com.mysql.jdbc.Driver";
     String driverUrl = "jdbc:mysql:/10.90.36.117:3306/" + BD;
     String user = "root";
