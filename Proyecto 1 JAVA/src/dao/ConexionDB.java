@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexionDB {
-
+	//BBDD
     Connection connection = null;
     String BD = "tablas_de_prueba";
     String driverClassName = "com.mysql.jdbc.Driver";
