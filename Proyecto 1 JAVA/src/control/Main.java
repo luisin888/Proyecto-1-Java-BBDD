@@ -7,9 +7,7 @@ public class Main {
 <<<<<<< HEAD
 		System.out.println("pene");
 		System.out.println();
-=======
-		System.out.println("HOLA");
->>>>>>> refs/remotes/origin/master
+hjgghjghj
 	}
 
 }
