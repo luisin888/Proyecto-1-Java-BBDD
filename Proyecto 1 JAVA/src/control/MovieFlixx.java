@@ -1,6 +1,10 @@
 package control;
 
+import datos.iDatosPelicula;
+import modelo.Pelicula;
+
 import gui.Menu;
+import modelo.Pelicula;
 import utilidades.LeerTeclado;
 
 public class MovieFlixx {
