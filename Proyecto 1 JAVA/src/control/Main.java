@@ -5,7 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-<<<<<<< HEAD
+<<<<<<< HEAD //sss
 
 =======
 System.out.println("hola que ase");System.out.println("adsasd");
