@@ -1,5 +1,9 @@
 package modelo;
 
+import java.util.Date;
+
+import utilidades.LeerTeclado;
+
 public class Pelicula {
 	private String nombre;
 	private int anioEstreno;
@@ -28,6 +32,9 @@ public class Pelicula {
 	public String toString() {
 		return "Pelicula [nombre=" + nombre + ", anioEstreno=" + anioEstreno + ", categoria=" + categoria + "]";
 	}
-	
+	public void crearPelicula() {
+        this.nombre = LeerTeclado.leerLinea("Introduzca el nombre:");
+        this.anioEstreno = LeerTeclado.leerInt("Introduzca el año");
+    }
 
 }
