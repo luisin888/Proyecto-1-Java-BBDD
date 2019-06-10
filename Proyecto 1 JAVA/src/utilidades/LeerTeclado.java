@@ -25,7 +25,6 @@ public class LeerTeclado {
 	public static short leerShort() {
 		return new Scanner(System.in).nextShort();
 	}
-
 	public static short leerShort(String mensaje) {
 		System.out.println(mensaje);
 		return leerShort();
