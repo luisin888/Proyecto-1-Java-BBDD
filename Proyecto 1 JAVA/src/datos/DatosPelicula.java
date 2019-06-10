@@ -43,7 +43,13 @@ public class DatosPelicula implements iDatosPelicula{
 	}
 
 	public void eliminarPelicula(Pelicula p) {
-		int pos = 
+		int pos = encontrarPelicula(p);
+		if(pos==-1) {
+			System.out.println("-- No encontrado");
+		}else {
+			System.out.println("-- Encontrado y eliminado");
+			peliculas.remove(pos);
+		}
 	}
 	
 }
