@@ -10,7 +10,7 @@ public class MovieFlixx {
 	public void setLeerOpcion(int leerOpcion) {
 		this.leerOpcion = leerOpcion;
 	}
-	public int leerOpcion{
+	public int leerOpcion(){
 		LeerTeclado leer=new LeerTeclado();
 		int opc=leer.leerInt();
 		return opc;
