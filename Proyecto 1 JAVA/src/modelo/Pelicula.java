@@ -10,6 +10,12 @@ public class Pelicula {
 	private Categorias categoria;
 	//private int prueba;
 	
+	public Pelicula() {
+		super();
+	}
+	public Pelicula(String nombre) {
+		this.nombre=nombre;
+	}
 	
 	public String getNombre() {
 		return nombre;

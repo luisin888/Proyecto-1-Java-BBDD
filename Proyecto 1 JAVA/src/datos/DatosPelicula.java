@@ -21,6 +21,19 @@ public class DatosPelicula implements iDatosPelicula{
 	        p.crearPelicula();
 	        addPelicula(p);
 	}
+	
+	public int encontrarPelicula(Pelicula p) {
+		int encontrado =-1;
+		for(int i=0;i<peliculas.size();i++) {
+			Pelicula pelicula = peliculas.get(i);
+			System.out.println("--" + pelicula.getNombre());
+			if(pelicula.equals(p)) {
+				System.out.println("+++ Encontrado!!");
+				encontrado = i;
+			}
+		}
+		return encontrado;
+	}
 
 	public void eliminarPelicula() {
 		System.out.println("--Pido datos del objeto a eliminar");
@@ -28,6 +41,9 @@ public class DatosPelicula implements iDatosPelicula{
 		Pelicula pelicula = new Pelicula(nombre);
 		this.eliminarPelicula(pelicula);
 	}
-	
+
+	public void eliminarPelicula(Pelicula p) {
+		int pos = 
+	}
 	
 }
