@@ -1,5 +1,7 @@
 package datos;
 
-public class DatosPelicula {
+public class DatosPelicula implements iDatosPelicula{
 
+	
+	
 }
