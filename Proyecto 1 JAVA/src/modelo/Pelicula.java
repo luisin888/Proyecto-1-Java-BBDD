@@ -4,6 +4,8 @@ public class Pelicula {
 	private String nombre;
 	private int anioEstreno;
 	private Categorias categoria;
+	//private int prueba;
+	
 	public String getNombre() {
 		return nombre;
 	}

@@ -7,7 +7,7 @@ public enum Categorias {
 	COMEDIA(4),
 	ANIMACION(5),
 	THRILLER(6);
-	
+	//private int prueba;
 	private final int categorias;
 	
 	//Constructor
