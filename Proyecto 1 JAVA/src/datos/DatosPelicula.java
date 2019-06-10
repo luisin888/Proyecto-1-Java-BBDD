@@ -52,4 +52,14 @@ public class DatosPelicula implements iDatosPelicula{
 		}
 	}
 	
+	public void modificarPelicula(Pelicula p) {
+		System.out.println("--Modificacion de datos");
+		int seleccion = LeerTeclado.leerInt("¿Que dato desea modificar (1)nombre, (2)Año");
+		if(seleccion==1) {
+			p.setNombre(LeerTeclado.leerLinea("Introduzca el nuevo nombre"));
+		}else if(seleccion ==2) {
+			p.setAnioEstreno(LeerTeclado.leerInt("Indique el nuevo año"));
+		}
+	}
+	
 }
