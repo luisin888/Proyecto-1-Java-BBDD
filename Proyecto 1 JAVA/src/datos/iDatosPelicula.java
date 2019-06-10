@@ -13,6 +13,7 @@ public interface iDatosPelicula {
 	public void eliminarPelicula();
 	public void eliminarPelicula(Pelicula p);
 	
-	
+	public void modificarPelicula();
+	public void modificarPelicula(Pelicula p);
 	
 }

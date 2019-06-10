@@ -51,6 +51,22 @@ public class DatosPelicula implements iDatosPelicula{
 			peliculas.remove(pos);
 		}
 	}
+	public void modificarPelicula() {
+		System.out.println("-- Pido datos del objeto a modificar");
+        String nombre = LeerTeclado.leerLinea("Introduzca el nombre:");
+        Pelicula pelicula = new Pelicula(nombre);
+        
+        int pos = encontrarPelicula(pelicula);
+        if (pos == -1) {
+            //no encontrado
+            System.out.println("-- No encontrado");
+        } else {
+            //encontrado
+            System.out.println("-- encontrado");
+             this.modificarPelicula(peliculas.get(pos));
+        }
+        
+	}
 	
 	public void modificarPelicula(Pelicula p) {
 		System.out.println("--Modificacion de datos");
