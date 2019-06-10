@@ -20,7 +20,6 @@ public class Menu {
         System.out.println("*    0.-CERRAR PROGRAMA");
         System.out.println("************************************************");
         System.out.println(" ");
-        System.out.print(">> ");
 
     }
 }
