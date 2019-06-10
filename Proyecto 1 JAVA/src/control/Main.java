@@ -1,16 +1,15 @@
 package control;
-
+import gui.Menu;
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-<<<<<<< HEAD //sss
+<<<<<<< HEAD
 
 =======
-System.out.println("hola que ase");System.out.println("adsasd");
->>>>>>> branch 'master' of https://github.com/luisin888/Proyecto-1-Java-BBDD.git
-
+		Menu m=new Menu();
+		m.mostrarMenu();
+>>>>>>> refs/remotes/origin/master
 	}
 
 }
