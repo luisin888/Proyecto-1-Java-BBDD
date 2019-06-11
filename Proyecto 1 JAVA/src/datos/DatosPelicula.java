@@ -78,4 +78,12 @@ public class DatosPelicula implements iDatosPelicula{
 		}
 	}
 	
+	public void listado() {
+		StringBuilder sb = new StringBuilder();
+		for(Pelicula p : peliculas) {
+			sb.append(p.toString()+"\n");
+		}
+		System.out.println(sb.toString());
+	}
+	
 }

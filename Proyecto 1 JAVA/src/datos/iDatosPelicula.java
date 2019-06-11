@@ -16,4 +16,6 @@ public interface iDatosPelicula {
 	public void modificarPelicula();
 	public void modificarPelicula(Pelicula p);
 	
+	public void listado();
+	
 }

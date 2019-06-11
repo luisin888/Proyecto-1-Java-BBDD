@@ -16,7 +16,9 @@ public class ServiciosPelicula implements iServiciosPelicula{
 		datos.addPelicula();
 	}
 	
-	//Hacer Listar
+	public void listado(){
+		datos.listado();
+	}
 	
 	public void eliminarPelicula(Pelicula p) {
 		datos.eliminarPelicula(p);
