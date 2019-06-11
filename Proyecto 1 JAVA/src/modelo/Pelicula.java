@@ -19,57 +19,59 @@ public class Pelicula {
 	private int anioEstreno;
 	private int categoria;
 
-
 	public Pelicula() {
 		super();
+		final Logger logger = LogManager.getLogger("Mensaje");
 	}
-
 
 	public Pelicula(String nombre, int anioEstreno, int categoria) {
-		this.nombre=nombre;
-		this.anioEstreno=anioEstreno;
-		this.categoria=categoria;
+		final Logger logger = LogManager.getLogger("Mensaje");
+		this.nombre = nombre;
+		this.anioEstreno = anioEstreno;
+		this.categoria = categoria;
 	}
-	
+
 	public String getNombre() {
+		final Logger logger = LogManager.getLogger("Mensaje");
 		return nombre;
 	}
 
-
 	public void setNombre(String nombre) {
+		final Logger logger = LogManager.getLogger("Mensaje");
 		this.nombre = nombre;
 	}
-
 
 	public int getAnioEstreno() {
 		return anioEstreno;
 	}
 
-
 	public void setAnioEstreno(int anioEstreno) {
+		final Logger logger = LogManager.getLogger("Mensaje");
 		this.anioEstreno = anioEstreno;
 	}
 
-
 	public int getCategoria() {
+		final Logger logger = LogManager.getLogger("Mensaje");
 		return categoria;
 	}
 
-
 	public void setCategoria(int categoria) {
+		final Logger logger = LogManager.getLogger("Mensaje");
 		this.categoria = categoria;
 	}
 
 	@Override
 	public String toString() {
+		final Logger logger = LogManager.getLogger("Mensaje");
 		return "Pelicula [nombre=" + nombre + ", anioEstreno=" + anioEstreno + ", categoria=" + categoria + "]";
 	}
 
-
 	public void crearPelicula() {
+		final Logger logger = LogManager.getLogger("Mensaje");
 		int num = 0;
 		this.nombre = LeerTeclado.leerLinea("Introduzca el nombre:");
 		this.anioEstreno = LeerTeclado.leerInt("Introduzca el año");
-		this.categoria= LeerTeclado.leerInt("Categoría: Policiaca(1) - Romantica(2) - Aventura (3) - Comedia (4) - Animación (5) - Thriller (6()");
+		this.categoria = LeerTeclado.leerInt(
+				"Categoría: Policiaca(1) - Romantica(2) - Aventura (3) - Comedia (4) - Animación (5) - Thriller (6()");
 	}
 }
