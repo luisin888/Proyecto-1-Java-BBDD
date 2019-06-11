@@ -4,7 +4,6 @@ import java.sql.SQLException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import dao.DAOException;
 import datos.DatosPelicula;
 import datos.iDatosPelicula;
@@ -13,7 +12,7 @@ import modelo.Pelicula;
 
 /**
  * 
- * @author Ra�l
+ * @author Raul
  * Nombre de clase: ConexionDB 
  * Descripcion: Conexi�n con base de datos
  * Fecha: 10/06/2019 
@@ -35,8 +34,7 @@ public class ServiciosPelicula implements iServiciosPelicula {
 		datos.addPelicula();
 	}
 
-
-	public void listado() throws SQLException{
+	public void listado() throws SQLException {
 
 		datos.listado();
 	}
