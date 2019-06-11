@@ -5,9 +5,9 @@ import java.sql.SQLException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import datos.DatosPelicula;
-import datos.DatosUsuario;
-import modelo.Pelicula;
+//import datos.DatosPelicula;
+//import datos.DatosUsuario;
+//import modelo.Pelicula;
 import control.MovieFlixx;
 import dao.DAOException;
 
@@ -24,6 +24,5 @@ public class Main {
 	public static void main(String[] args) throws SQLException, DAOException {
 		MovieFlixx movie = new MovieFlixx();
 		movie.seleccionarOpcion();
-		
 	}
 }

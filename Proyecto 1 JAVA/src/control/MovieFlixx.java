@@ -4,12 +4,10 @@ import dao.DAOException;
 import java.sql.SQLException;
 import servicios.iServiciosPelicula;
 import servicios.ServiciosPelicula;
-import datos.iDatosPelicula;
 import modelo.Pelicula;
 import datos.DatosPelicula;
 
 import gui.Menu;
-import modelo.Pelicula;
 import utilidades.LeerTeclado;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,7 +15,7 @@ import org.apache.logging.log4j.Logger;
 /**
  * 
  * @author Luis Nombre de clase: LeerTeclado Descripcion: Metodos para
- *         seleccionar opciones del menú Fecha: 11/06/2019
+ *         seleccionar opciones del menï¿½ Fecha: 11/06/2019
  * @version: v1.0
  *
  */
