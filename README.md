@@ -23,7 +23,7 @@ Desarrollo de programa en Java para gestión y administracción de BBDD
 
 <h3>5-Crear Peliculas Nuevas</h3>
 
-5.1 Crear Proyecto con los paquetes control, servicios, datos, utilidades, gui y dao.<br />
+5.1 Crear clase Pelicula en el paquete servicios(interfaz y clase)<br />
 5.2 Importar librería de Peliculas MySQL<br />
 5.3 Crear Schema, tabla "Pelicula"<br />
 5.4 Importar los datos del archivo csv.<br />
@@ -35,7 +35,7 @@ Desarrollo de programa en Java para gestión y administracción de BBDD
 5.10 Crear Clase LecturaDatos en el paquete utilidades<br />
 5.11 Crear clase MovieFlixx en el paquete control, con el método start();<br />
 5.12 Crear clase Main en el paquete control que llama al método start de la clase movieflixx<br />
-5.13 Crear clase Pelicula en el paquete servicios(interfaz y clase)
+
 
 <h3>6-Listar películas</h3>
 6.1 Crear método recuperar películas en interface y en la clase película dao<br />
@@ -81,6 +81,7 @@ Desarrollo de programa en Java para gestión y administracción de BBDD
 0.12 Prueba de calidad control<br />
 0.13 Prueba calidad dao<br />
 0.14 Planificación en Jira (herramientas seguimiento)
+0.15 Crear Proyecto con los paquetes control, servicios, datos, utilidades, gui y dao.
 
 <h3>1-Alta usuario</h3>
 1.1 Crear clase "Usuario"<br />
