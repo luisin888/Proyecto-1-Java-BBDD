@@ -25,15 +25,5 @@ public class Main {
 		MovieFlixx movie = new MovieFlixx();
 		movie.seleccionarOpcion();
 		
-		//Pelicula p = new Pelicula();
-		//p.crearPelicula();
-		//DatosPelicula d = new DatosPelicula();
-		//try {
-			//d.addPelicula(p);
-		//} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			//e.printStackTrace();
-		//}
-	//}
 	}
 }

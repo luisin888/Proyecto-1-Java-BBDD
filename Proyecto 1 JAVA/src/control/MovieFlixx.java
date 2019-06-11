@@ -6,6 +6,7 @@ import servicios.iServiciosPelicula;
 import servicios.ServiciosPelicula;
 import datos.iDatosPelicula;
 import modelo.Pelicula;
+import datos.DatosPelicula;
 
 import gui.Menu;
 import modelo.Pelicula;
@@ -64,7 +65,16 @@ public class MovieFlixx {
 			case 5:
 				// CrearPeliculasNuevas
 				System.out.println("caso 5");
-				servicios.addPelicula();
+				Pelicula p = new Pelicula();
+				p.crearPelicula();
+				DatosPelicula d = new DatosPelicula();
+				try {
+					d.addPelicula(p);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				servicios.addPelicula(p);
 				break;
 			case 6:
 				// ListarPeliculas
