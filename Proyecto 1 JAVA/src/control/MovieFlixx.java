@@ -74,7 +74,7 @@ public class MovieFlixx {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				servicios.addPelicula(p);
+				//servicios.addPelicula(p);
 				break;
 			case 6:
 				// ListarPeliculas
@@ -100,6 +100,7 @@ public class MovieFlixx {
 			case 11:
 				// BorrarPeliculasss
 				System.out.println("caso 11");
+				
 				servicios.eliminarPelicula();
 				break;
 			case 12:
