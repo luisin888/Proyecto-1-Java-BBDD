@@ -34,7 +34,8 @@ public class DatosPelicula implements iDatosPelicula {
 	public void addPelicula(Pelicula p) throws SQLException {
 		final Logger logger = LogManager.getLogger("Mensaje");
 		try (Statement stmt = con.createStatement()) {
-			String query = "INSERT INTO peliculas VALUES ('" + p.getNombre() + "'," + "'" + p.getAnioEstreno() + "',"
+			System.out.println("eeEEEEE");
+			String query = "INSERT INTO peliculas(nombrepeli,anno,categoria) VALUES ('" + p.getNombre() + "'," + "'" + p.getAnioEstreno() + "',"
 					+ "'" + p.getCategoria() + "')";
 			System.out.println(query);
 			if (stmt.executeUpdate(query) != 1) {
