@@ -1,5 +1,6 @@
 package control;
 
+import dao.DAOException;
 import java.sql.SQLException;
 import servicios.iServiciosPelicula;
 import servicios.ServiciosPelicula;
@@ -30,7 +31,7 @@ public class MovieFlixx {
 		final Logger logger = LogManager.getLogger("Mensaje");
 	}
 
-	public void seleccionarOpcion() {
+	public void seleccionarOpcion() throws SQLException, DAOException {
 		final Logger logger = LogManager.getLogger("Mensaje");
 		Menu m = new Menu();
 		m.mostrarMenu();
