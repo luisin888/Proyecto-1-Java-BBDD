@@ -51,18 +51,6 @@ Desarrollo de programa en Java para gestión y administracción de BBDD
 11.1 Método eliminar película en el bean película<br />
 11.2 Añadir opción eliminar película en la interfaz y en la clase película dao<br />
 11.3 Añadir opción eliminar película  en las clases Menu y MovieFlix
-<h3>12-Modificar Peliculas</h3>
-12.1 Método eliminar película en el bean pelicula<br />
-12.2 Método eliminar película en la interface y en la clase película dao<br />
-12.3 Añadir opción eliminar película a clases Menu y MovieFlix<br />
-12.4 Método encontrarPelicula<br />
-12.5  Modificar clase IserviciosPelicula<br />
-12.6 Modificar clase "ServiciosPelicula"<br />
-12.7 Modificar clase con iDatosPelicula<br />
-
-
-
-
 
 <h2>Tareas realizadas Sprint 2</h2>
 
@@ -106,6 +94,17 @@ Desarrollo de programa en Java para gestión y administracción de BBDD
 <h3>4-Listas usuarios</h3>
 4.1 Usar metodo listaUsuarios en (Datosusa, serviciosusa, iserviciosusa)<br />
 4.2 Añadir la opcion al menu y clase MovieFlixx
+
+<h3>12-Modificar Peliculas</h3>
+12.1 Método eliminar película en el bean pelicula<br />
+12.2 Método eliminar película en la interface y en la clase película dao<br />
+12.3 Añadir opción eliminar película a clases Menu y MovieFlix<br />
+12.4 Método encontrarPelicula<br />
+12.5  Modificar clase IserviciosPelicula<br />
+12.6 Modificar clase "ServiciosPelicula"<br />
+12.7 Modificar clase con iDatosPelicula<br />
+
+
 <h3>10-Listas peliculas vistas por usuario</h3>
 <br />
 <br />
