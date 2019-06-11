@@ -16,10 +16,12 @@ Desarrollo de programa en Java para gestión y administracción de BBDD
 9- Listar peliculas mejor valoradas<br />
 10-Listar peliculas vistas por usuario<br />
 11-Borrar pelicula<br />
+12-Modificar peliculas<br />
 
 <h2>Tareas realizadas Sprint 1</h2>
 
 <h3>0-Tareas generales</h3>
+
 0.1 Generar JavaDoc <br />
 0.2 Crear tabla categorias <br />
 0.3 Conectar base de datos con pelicula <br />
@@ -34,12 +36,9 @@ Desarrollo de programa en Java para gestión y administracción de BBDD
 0.12 Prueba de calidad control<br />
 0.13 Prueba calidad dao<br />
 0.14 Planificación en Jira (herramientas seguimiento)
-<h3>1-Alta usuario</h3>
-1.1 Crear clase "Usuario"<br />
-1.2 Crear clase "DatosUsuario"<br />
-1.3 Crear clase "ServiciosUsuario" + interfaz "iServiciosUsuario"<br />
-1.4 Crear clase "iDatosUsuario"
+
 <h3>5-Crear Peliculas Nuevas</h3>
+
 5.1 Crear Proyecto con los paquetes control, servicios, datos, utilidades, gui y dao.<br />
 5.2 Importar librería de Peliculas MySQL<br />
 5.3 Crear Schema, tabla "Pelicula"<br />
@@ -53,6 +52,7 @@ Desarrollo de programa en Java para gestión y administracción de BBDD
 5.11 Crear clase MovieFlixx en el paquete control, con el método start();<br />
 5.12 Crear clase Main en el paquete control que llama al método start de la clase movieflixx<br />
 5.13 Crear clase Pelicula en el paquete servicios(interfaz y clase)
+
 <h3>6-Listar películas</h3>
 6.1 Crear método recuperar películas en interface y en la clase película dao<br />
 6.2 Crear interfaz en paquete datos con el método añadir película<br />
@@ -60,6 +60,8 @@ Desarrollo de programa en Java para gestión y administracción de BBDD
 6.4 Añadir opción ListarPeliculas en las clases Menu y MovieFlix<br />
 6.5 Crear interfaz servicios en paquete servicios con sus metodos<br />
 6.6 Crear clase servicios (implementa la interfaz) en sus métodos en paquete servicios
+
+
 <h3>11-Borrar peliculas</h3>
 11.1 Método eliminar película en el bean película<br />
 11.2 Añadir opción eliminar película en la interfaz y en la clase película dao<br />
@@ -72,8 +74,36 @@ Desarrollo de programa en Java para gestión y administracción de BBDD
 12.5  Modificar clase IserviciosPelicula<br />
 12.6 Modificar clase "ServiciosPelicula"<br />
 12.7 Modificar clase con iDatosPelicula<br />
-<br />
-<br />
+
+
+
+
+
+<h2>Tareas realizadas Sprint 2</h2>
+
+<h3>1-Alta usuario</h3>
+1.1 Crear clase "Usuario"<br />
+1.2 Crear clase "DatosUsuario"<br />
+1.3 Crear clase "ServiciosUsuario" + interfaz "iServiciosUsuario"<br />
+1.4 Crear clase "iDatosUsuario"
+1.5 Crear metodo "add.usu" en todas las capas
+
+<h3>2-Modificar usuario</h3>
+2.1 Metodos encontrar_usu(Datos)<br />
+2.2 Metodo modificarusuario (Datos)<br />
+2.3 Metodo modificarusuario (Interfaz)<br />
+2.4 Metodo modificarusuario (dao)<br />
+2.5 Añadir opcion modif.usu en menu y en clase MovieFlixx
+
+
+<h3>3-Baja usuario</h3>
+3.1 Crear metodo eliminar_usuario en (DatosUsuario, iDatosUsuario) <br />
+3.2 Añadir opciones al menu
+
+<h3>4-Listas usuarios</h3>
+4.1 Usar metodo listaUsuarios en (Datosusa, serviciosusa, iserviciosusa)<br />
+4.2 Añadir la opcion al menu y clase MovieFlixx
+<h3>10-Listas peliculas vistas por usuario</h3>
 <br />
 <br />
 <br />
