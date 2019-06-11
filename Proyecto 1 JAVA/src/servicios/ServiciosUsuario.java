@@ -21,7 +21,7 @@ import modelo.Usuario;
 
 public class ServiciosUsuario implements iServiciosUsuario {
 
-	private iDatosUsuario datos = new DatosUsuario();
+	private DatosUsuario datos = new DatosUsuario();
 
 	public void addUsuario(Usuario u) throws SQLException {
 		final Logger logger = LogManager.getLogger("Mensaje");

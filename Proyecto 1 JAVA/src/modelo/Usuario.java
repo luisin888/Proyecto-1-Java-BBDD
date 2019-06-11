@@ -9,10 +9,8 @@ import utilidades.LeerTeclado;
 
 /**
  * 
- * @author Andrea
- * Nombre de clase: ConexionDB 
- * Descripcion: Conexi�n con base de datos
- * Fecha: 10/06/2019 
+ * @author Andrea Nombre de clase: ConexionDB Descripcion: Conexi�n con base de
+ *         datos Fecha: 10/06/2019
  * @version: v1.0
  *
  */
@@ -33,7 +31,7 @@ public class Usuario {
 		this.nombreCompleto = nombreCompleto;
 	}
 
-	public Usuario(String nombreCompleto, String fechaNacimiento, String ciudad ) {
+	public Usuario(String nombreCompleto, String fechaNacimiento, String ciudad) {
 		final Logger logger = LogManager.getLogger("Mensaje");
 		this.nombreCompleto = nombreCompleto;
 		this.ciudad = ciudad;
@@ -76,18 +74,12 @@ public class Usuario {
 		return "Usuario [nombreCompleto=" + nombreCompleto + ", fechaNacimiento=" + fechaNacimiento + ", ciudad="
 				+ ciudad + "]";
 	}
-	
 
 	public void crearUsuario() {
 		final Logger logger = LogManager.getLogger("Mensaje");
-		
 		this.nombreCompleto = LeerTeclado.leerLinea("Introduzca el nombre:");
-		
-		this.fechaNacimiento= LeerTeclado.leerLinea("Dime Fecha Nacimiento: DD/MM/YYYY");
-			
+		this.fechaNacimiento = LeerTeclado.leerLinea("Dime Fecha Nacimiento: DD/MM/YYYY");
 		this.ciudad = LeerTeclado.leerLinea("Introduce Ciudad Residencia");
-		
 
-		
 	}
 }
