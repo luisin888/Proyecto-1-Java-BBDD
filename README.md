@@ -35,6 +35,7 @@ Desarrollo de programa en Java para gestión y administracción de BBDD
 5.10 Crear Clase LecturaDatos en el paquete utilidades<br />
 5.11 Crear clase MovieFlixx en el paquete control, con el método start();<br />
 5.12 Crear clase Main en el paquete control que llama al método start de la clase movieflixx<br />
+5.13 Crear clase Pelicula en el paquete servicios(interfaz y clase)
 
 
 <h3>6-Listar películas</h3>
