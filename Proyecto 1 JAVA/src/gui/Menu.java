@@ -27,7 +27,7 @@ public class Menu {
 		System.out.println("*    2.-Modificar Usuario");
 		System.out.println("*    3.-Dar de Baja a un Usuario");
 		System.out.println("*    4.-Listar TODOS los Usuarios");
-		System.out.println("*    5.-Añadir Pelicula Nueva");
+		System.out.println("*    5.-AÃ±adir Pelicula Nueva");
 		System.out.println("*    6.-Listar TODAS las Peliculas");
 		System.out.println("*    7.-Listar Peliculas Por Categoria");
 		System.out.println("*    8.-Listar Peliculas Mas Vistas");
