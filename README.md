@@ -80,14 +80,14 @@ Desarrollo de programa en Java para gestión y administracción de BBDD
 0.11 Prueba calidad servicios<br />
 0.12 Prueba de calidad control<br />
 0.13 Prueba calidad dao<br />
-0.14 Planificación en Jira (herramientas seguimiento)
+0.14 Planificación en Jira (herramientas seguimiento)<br />
 0.15 Crear Proyecto con los paquetes control, servicios, datos, utilidades, gui y dao.
 
 <h3>1-Alta usuario</h3>
 1.1 Crear clase "Usuario"<br />
 1.2 Crear clase "DatosUsuario"<br />
 1.3 Crear clase "ServiciosUsuario" + interfaz "iServiciosUsuario"<br />
-1.4 Crear clase "iDatosUsuario"
+1.4 Crear clase "iDatosUsuario"<br />
 1.5 Crear metodo "add.usu" en todas las capas
 
 <h3>2-Modificar usuario</h3>
