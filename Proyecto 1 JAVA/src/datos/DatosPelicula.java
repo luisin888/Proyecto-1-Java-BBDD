@@ -2,28 +2,44 @@ package datos;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import java.sql.Statement;
+import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import dao.ConexionDB;
 import modelo.Pelicula;
 import utilidades.LeerTeclado;
 
 public class DatosPelicula implements iDatosPelicula{
 
-	private List<Pelicula> peliculas = new ArrayList<>();
+	//private List<Pelicula> peliculas = new ArrayList<>();
 	
+    private Connection con = null;
+
+    DatosPelicula() {
+
+        con = new ConexionDB().getConnection();
+    }
 	
 	public void addPelicula(Pelicula p) {
-		peliculas.add(p);
+		try(Statement stmt = con.createStatement()){
+			String query = "INSERT INTO PELICULAS VALUES (" + p.getNombre() +","
+			+
+		}
 	}
 
-	public void addPelicula() {
-		 Pelicula p = new Pelicula();
-	        p.crearPelicula();
-	        addPelicula(p);
+	//public void addPelicula() {
+		 //Pelicula p = new Pelicula();
+	        //p.crearPelicula();
+	        //addPelicula(p);
 	}
 	
 	public int encontrarPelicula(Pelicula p) {
