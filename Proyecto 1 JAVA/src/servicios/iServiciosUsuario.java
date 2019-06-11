@@ -23,7 +23,7 @@ public interface iServiciosUsuario {
 		public void modificarUsuario(Usuario u)throws DAOException;
 		public void modificarUsuario()throws DAOException;
 		
-		public void listado() throws SQLException;
+		public void listadoUsuario() throws SQLException;
 	}
 
 	
