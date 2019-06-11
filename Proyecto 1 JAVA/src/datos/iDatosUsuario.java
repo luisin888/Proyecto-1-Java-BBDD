@@ -18,19 +18,16 @@ import modelo.Usuario;
 public interface iDatosUsuario {
 	
 	public void addUsuario(Usuario u) throws SQLException;
-
 	public void addUsuario() throws SQLException;
 
 	public Usuario encontrarUsuario(int id) throws DAOException;
 
 	public void eliminarUsuario(int id) throws DAOException;
-
 	public void eliminarUsuario() throws DAOException;
 
 	public void modificarUsuario(Usuario u) throws DAOException;
-
 	public void modificarUsuario() throws DAOException;
 
-	public void listado() throws SQLException;
+	public void listadoUsuario() throws SQLException;
 
 }
