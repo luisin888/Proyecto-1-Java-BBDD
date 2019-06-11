@@ -2,6 +2,7 @@ package datos;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -9,7 +10,6 @@ import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -21,6 +21,10 @@ import utilidades.LeerTeclado;
 public class DatosPelicula implements iDatosPelicula{
 
 	//private List<Pelicula> peliculas = new ArrayList<>();
+
+	private List<Pelicula> peliculas = new ArrayList<>();
+	private static final Logger logger = LogManager.getLogger("Servicios");
+
 	
     private Connection con = null;
 
@@ -40,8 +44,9 @@ public class DatosPelicula implements iDatosPelicula{
 		 //Pelicula p = new Pelicula();
 	        //p.crearPelicula();
 	        //addPelicula(p);
-	}
+	//}
 	
+	@SuppressWarnings("null")
 	public int encontrarPelicula(Pelicula p) {
 	try {
 	
@@ -54,14 +59,15 @@ public class DatosPelicula implements iDatosPelicula{
 				encontrado = i;
 			}
 		}
-		return encontrado; } catch (SQLException e) {
+		return encontrado; } catch (Exception e) {
 		
 			logger.info("la película NO se ha dado de alta ");
 			System.out.println("No se ha podido realizar el alta de la película");
-			
+						
 		}
 	
-	
+	return (Integer) null;
+	 
 	}
 
 	public void eliminarPelicula() {
