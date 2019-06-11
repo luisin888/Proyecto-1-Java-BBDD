@@ -28,7 +28,7 @@ public class MovieFlixx {
 	DatosUsuario du = new DatosUsuario();
 	DatosPelicula d = new DatosPelicula();
 	ServiciosPelicula servicios = new ServiciosPelicula();
-
+	ServiciosUsuario serviciosUsuario = new ServiciosUsuario();
 	public MovieFlixx() {
 
 		super();
@@ -72,7 +72,7 @@ public class MovieFlixx {
 			case 4:
 				// ListarUsuarios
 				System.out.println("caso 4");
-				
+			    serviciosUsuario.listadoUsuario();
 				break;
 			case 5:
 				// CrearPeliculasNuevas
