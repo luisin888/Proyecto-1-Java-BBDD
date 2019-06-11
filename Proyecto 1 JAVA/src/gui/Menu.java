@@ -13,6 +13,7 @@ import org.apache.logging.log4j.Logger;
  * @version: v1.0
  *
  */
+
 public class Menu {
 
 	public static void mostrarMenu() {
