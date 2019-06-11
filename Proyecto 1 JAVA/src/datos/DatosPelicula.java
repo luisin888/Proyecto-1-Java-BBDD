@@ -95,12 +95,10 @@ public class DatosPelicula implements iDatosPelicula{
 	
 	public void listado() throws SQLException {
 		Statement stmt = con.createStatement();
-			String query = "select nombrepeli, anno, categoria from peliculas";
+			String query = "select id_pelicula, nombrepeli, anno, categoria from peliculas";
 			ResultSet rs = stmt.executeQuery(query);
 			while(rs.next()) {
-				System.out.print(rs.getString("nombrepeli"));
-				System.out.print(rs.getInt("anno"));
-				System.out.print(rs.getString("categoria"));
+				System.out.print(rs.getInt("id_pelicula")+", "+rs.getString("nombrepeli")+", "+ rs.getInt("anno")+", "+ rs.getString("categoria")+ "\n");
 			}
 	}
 
