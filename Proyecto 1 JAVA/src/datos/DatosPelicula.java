@@ -1,6 +1,5 @@
 package datos;
 
-
 /**
  * @autor Raul
  * Nombre de la clase: DatosPelicula
@@ -10,7 +9,6 @@ package datos;
  * 
  * @version v1.0
  */
-
 
 import java.sql.Connection;
 import java.sql.SQLException;
