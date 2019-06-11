@@ -13,9 +13,9 @@ import modelo.Pelicula;
 
 /**
  * 
- * @author Raúl
+ * @author Raï¿½l
  * Nombre de clase: ConexionDB 
- * Descripcion: Conexión con base de datos
+ * Descripcion: Conexiï¿½n con base de datos
  * Fecha: 10/06/2019 
  * @version: v1.0
  *
@@ -35,8 +35,9 @@ public class ServiciosPelicula implements iServiciosPelicula {
 		datos.addPelicula();
 	}
 
-	public void listado() {
-		final Logger logger = LogManager.getLogger("Mensaje");
+
+	public void listado() throws SQLException{
+
 		datos.listado();
 	}
 

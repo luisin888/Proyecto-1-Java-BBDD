@@ -7,9 +7,9 @@ import modelo.Pelicula;
 
 /**
  * 
- * @author Raúl
+ * @author Raï¿½l
  * Nombre de clase: ConexionDB 
- * Descripcion: Conexión con base de datos
+ * Descripcion: Conexiï¿½n con base de datos
  * Fecha: 10/06/2019 
  * @version: v1.0
  *
@@ -20,6 +20,7 @@ public interface iServiciosPelicula {
 
 	public void addPelicula() throws SQLException;
 
+
 	public void eliminarPelicula(int id) throws DAOException;
 
 	public void eliminarPelicula() throws DAOException;
@@ -29,4 +30,9 @@ public interface iServiciosPelicula {
 	public void modificarPelicula() throws DAOException;
 
 	public void listado();
+	public void modificarPelicula(Pelicula p)throws DAOException;
+	public void modificarPelicula()throws DAOException;
+	
+	public void listado() throws SQLException;
+
 }

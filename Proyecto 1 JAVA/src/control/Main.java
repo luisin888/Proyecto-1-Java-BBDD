@@ -8,6 +8,8 @@ import org.apache.logging.log4j.Logger;
 import datos.DatosPelicula;
 import datos.DatosUsuario;
 import modelo.Pelicula;
+import control.MovieFlixx;
+import dao.DAOException;
 
 /**
  * 
@@ -19,19 +21,9 @@ import modelo.Pelicula;
 public class Main {
 	final Logger logger = LogManager.getLogger("Mensaje");
 
-	public static void main(String[] args) {
-		//MovieFlixx movie = new MovieFlixx();
-		//movie.seleccionarOpcion();
+	public static void main(String[] args) throws SQLException, DAOException {
+		MovieFlixx movie = new MovieFlixx();
+		movie.seleccionarOpcion();
 		
-		Pelicula p = new Pelicula();
-		p.crearPelicula();
-		DatosPelicula d = new DatosPelicula();
-		try {
-			d.addPelicula(p);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
-
 }

@@ -6,6 +6,7 @@ import servicios.iServiciosPelicula;
 import servicios.ServiciosPelicula;
 import datos.iDatosPelicula;
 import modelo.Pelicula;
+import datos.DatosPelicula;
 
 import gui.Menu;
 import modelo.Pelicula;
@@ -22,7 +23,9 @@ import org.apache.logging.log4j.Logger;
  */
 
 public class MovieFlixx {
-
+	
+	Pelicula p = new Pelicula();
+	DatosPelicula d = new DatosPelicula();
 	iServiciosPelicula servicios = new ServiciosPelicula();
 
 	public MovieFlixx() {
@@ -64,7 +67,14 @@ public class MovieFlixx {
 			case 5:
 				// CrearPeliculasNuevas
 				System.out.println("caso 5");
-				servicios.addPelicula();
+				p.crearPelicula();
+				try {
+					d.addPelicula(p);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				//servicios.addPelicula(p);
 				break;
 			case 6:
 				// ListarPeliculas
