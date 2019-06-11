@@ -20,22 +20,6 @@ Desarrollo de programa en Java para gestión y administracción de BBDD
 
 <h2>Tareas realizadas Sprint 1</h2>
 
-<h3>0-Tareas generales</h3>
-
-0.1 Generar JavaDoc <br />
-0.2 Crear tabla categorias <br />
-0.3 Conectar base de datos con pelicula <br />
-0.4 Enlazar tabla categorías con tabla películas a través de FK <br />
-0.5 Prueba calidad utilidades<br />
-0.6 Prueba calidad datos<br />
-0.7 Hacer fichero README con tareas realizadas<br />
-0.8 Comprobar que podemos añadir películas modificar y borrar <br />
-0.9 Prueba calidad model<br />
-0.10 Prueba calidad gui<br />
-0.11 Prueba calidad servicios<br />
-0.12 Prueba de calidad control<br />
-0.13 Prueba calidad dao<br />
-0.14 Planificación en Jira (herramientas seguimiento)
 
 <h3>5-Crear Peliculas Nuevas</h3>
 
@@ -80,6 +64,23 @@ Desarrollo de programa en Java para gestión y administracción de BBDD
 
 
 <h2>Tareas realizadas Sprint 2</h2>
+
+<h3>0-Tareas generales</h3>
+
+0.1 Generar JavaDoc <br />
+0.2 Crear tabla categorias <br />
+0.3 Conectar base de datos con pelicula <br />
+0.4 Enlazar tabla categorías con tabla películas a través de FK <br />
+0.5 Prueba calidad utilidades<br />
+0.6 Prueba calidad datos<br />
+0.7 Hacer fichero README con tareas realizadas<br />
+0.8 Comprobar que podemos añadir películas modificar y borrar <br />
+0.9 Prueba calidad model<br />
+0.10 Prueba calidad gui<br />
+0.11 Prueba calidad servicios<br />
+0.12 Prueba de calidad control<br />
+0.13 Prueba calidad dao<br />
+0.14 Planificación en Jira (herramientas seguimiento)
 
 <h3>1-Alta usuario</h3>
 1.1 Crear clase "Usuario"<br />
