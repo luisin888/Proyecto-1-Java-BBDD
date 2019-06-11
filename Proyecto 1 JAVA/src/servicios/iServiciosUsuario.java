@@ -7,7 +7,7 @@ import modelo.Usuario;
 
 /**
  * 
- * @author David Nombre de clase: iServiciosUsuario Descripcion: Metodos en clase iServic Fecha: 11/06/2019
+ * @author David -Nombre de clase: iServiciosUsuario -Descripcion: Metodos en clase iServicio -Fecha: 11/06/2019
  * @version: v1.0
  *
  */
