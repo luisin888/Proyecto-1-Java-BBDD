@@ -9,7 +9,7 @@ public class ConexionDB {
     Connection connection = null;
     String BD = "peliculas";
     String driverClassName = "com.mysql.jdbc.Driver";
-    String driverUrl = "jdbc:mysql:/10.90.36.117:3306/" + BD;
+    String driverUrl = "jdbc:mysql:/10.90.36.103:3306/" + BD;
     String user = "root";
     String password = "root";
 

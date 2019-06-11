@@ -48,37 +48,48 @@ public class DatosPelicula implements iDatosPelicula{
 	        //addPelicula(p);
 	//}
 	
-	public int encontrarPelicula(Pelicula p) {
-	
-	int encontrado =-1;
-		for(int i=0;i<peliculas.size();i++) {
-			Pelicula pelicula = peliculas.get(i);
-			System.out.println("--" + pelicula.getNombre());
-			if(pelicula.equals(p)) {
-				System.out.println("+++ Encontrado!!");
-				encontrado = i;
+	public int encontrarPelicula(int id)throws DAOException {
+		try(Statement stmt = con.createStatement()){
+			String query = "SELECT * FROM PELICULAS WHERE ID="+ id;
+			ResultSet rs = stmt.executeQuery(query);
+			if(!rs.next()) {
+				return null;
 			}
+			return (new Pelicula(rs.getInt("ID"), rs.getString("FIRSTNAME"),))
 		}
-		return encontrado;
+	//int encontrado =-1;
+		//for(int i=0;i<peliculas.size();i++) {
+			//Pelicula pelicula = peliculas.get(i);
+			//System.out.println("--" + pelicula.getNombre());
+			//if(pelicula.equals(p)) {
+				//System.out.println("+++ Encontrado!!");
+				//encontrado = i;
+			//}
+		//}
+		//return encontrado;
 	}
 						
 
-	public void eliminarPelicula() {
-		System.out.println("--Pido datos del objeto a eliminar");
-		String nombre = LeerTeclado.leerLinea("Introduzca el nombre");
-		Pelicula pelicula = new Pelicula(nombre);
-		this.eliminarPelicula(pelicula);
+	public void eliminarPelicula(int id)throws DAOException {
+		Peliculas p = findById(id);
+		if(p==null) {
+			throw new DAOException("Film id: " + id + " does not exist to delete.");
+		}
+		//System.out.println("--Pido datos del objeto a eliminar");
+		//String nombre = LeerTeclado.leerLinea("Introduzca el nombre");
+		//Pelicula pelicula = new Pelicula(nombre);
+		//this.eliminarPelicula(pelicula);
 	}
 
-	public void eliminarPelicula(Pelicula p) {
-		int pos = encontrarPelicula(p);
-		if(pos==-1) {
-			System.out.println("-- No encontrado");
-		}else {
-			System.out.println("-- Encontrado y eliminado");
-			peliculas.remove(pos);
-		}
-	}
+	//public void eliminarPelicula(Pelicula p) {
+		//int pos = encontrarPelicula(p);
+		//if(pos==-1) {
+			//System.out.println("-- No encontrado");
+		//}else {
+			//System.out.println("-- Encontrado y eliminado");
+			//peliculas.remove(pos);
+		//}
+	//}
 	public void modificarPelicula() {
 		System.out.println("-- Pido datos del objeto a modificar");
         String nombre = LeerTeclado.leerLinea("Introduzca el nombre:");
