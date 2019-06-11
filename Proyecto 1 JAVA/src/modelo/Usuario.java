@@ -3,7 +3,8 @@ package modelo;
 import java.util.Date;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
 import utilidades.LeerTeclado;
 
 /**
@@ -19,7 +20,7 @@ import utilidades.LeerTeclado;
 public class Usuario {
 
 	private String nombreCompleto;
-	private Date fechaNacimiento;
+	private String fechaNacimiento;
 	private String ciudad;
 
 	public Usuario() {
@@ -32,7 +33,7 @@ public class Usuario {
 		this.nombreCompleto = nombreCompleto;
 	}
 
-	public Usuario(String nombreCompleto, Date fechaNacimiento, String ciudad ) {
+	public Usuario(String nombreCompleto, String fechaNacimiento, String ciudad ) {
 		final Logger logger = LogManager.getLogger("Mensaje");
 		this.nombreCompleto = nombreCompleto;
 		this.ciudad = ciudad;
@@ -49,12 +50,12 @@ public class Usuario {
 		this.nombreCompleto = nombreCompleto;
 	}
 
-	public Date getFechaNacimiento() {
+	public String getFechaNacimiento() {
 		final Logger logger = LogManager.getLogger("Mensaje");
 		return fechaNacimiento;
 	}
 
-	public void setFechaNacimiento(Date fechaNacimiento) {
+	public void setFechaNacimiento(String fechaNacimiento) {
 		final Logger logger = LogManager.getLogger("Mensaje");
 		this.fechaNacimiento = fechaNacimiento;
 	}
@@ -75,12 +76,18 @@ public class Usuario {
 		return "Usuario [nombreCompleto=" + nombreCompleto + ", fechaNacimiento=" + fechaNacimiento + ", ciudad="
 				+ ciudad + "]";
 	}
+	
 
 	public void crearUsuario() {
 		final Logger logger = LogManager.getLogger("Mensaje");
 		
 		this.nombreCompleto = LeerTeclado.leerLinea("Introduzca el nombre:");
-		this.fechaNacimiento = LeerTeclado.leer("Introduzca el año");
+		
+		this.fechaNacimiento= LeerTeclado.leerLinea("Dime Fecha Nacimiento: DD/MM/YYYY");
+			
 		this.ciudad = LeerTeclado.leerLinea("Introduce Ciudad Residencia");
+		
+
+		
 	}
 }
