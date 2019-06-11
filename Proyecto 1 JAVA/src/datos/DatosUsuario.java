@@ -44,13 +44,28 @@ public class DatosUsuario implements iDatosUsuario {
 			if (!rs.next()) {
 				return null;
 			}
-			return (new Usuario(rs.getInt("id_usuario"), rs.getInt("nombrecompleto"), rs.getInt("categoria")));
+			return (new Usuario(rs.getString("nombrecompleto"), rs.getDate("fecha_nac"),
+					rs.getString("ciudad_residencia")));
 		} catch (SQLException se) {
 			throw new DAOException("Error finding film in DAO", se);
 		}
 	}
 	
-	
+	public void eliminarUsuario(int id) throws DAOException {
+		final Logger logger = LogManager.getLogger("Mensaje");
+		Usuario u = encontrarUsuario(id);
+		if (u == null) {
+			throw new DAOException("usuario id: " + id + " does not exist to delete.");
+		}
+		try (Statement stmt = con.createStatement()) {
+			String query = "DELETE FROM usuario WHERE ID=" + id;
+			if (stmt.executeUpdate(query) != 1) {
+				throw new DAOException("Error deleting usuario");
+			}
+		} catch (SQLException se) {
+			throw new DAOException("Error deleting film in DAO", se);
+		}
+	}
 	
 	
 	

@@ -8,7 +8,7 @@ import org.apache.logging.log4j.Logger;
  * 
  * @author Andrea
  * Nombre de clase: ConexionDB 
- * Descripcion: Conexión con base de datos
+ * Descripcion: Conexiï¿½n con base de datos
  * Fecha: 10/06/2019 
  * @version: v1.0
  *
@@ -30,7 +30,7 @@ public class Usuario {
 		this.nombreCompleto = nombreCompleto;
 	}
 
-	public Usuario(String nombreCompleto, String ciudad, Date fechaNacimiento) {
+	public Usuario(String nombreCompleto, Date fechaNacimiento, String ciudad ) {
 		final Logger logger = LogManager.getLogger("Mensaje");
 		this.nombreCompleto = nombreCompleto;
 		this.ciudad = ciudad;
