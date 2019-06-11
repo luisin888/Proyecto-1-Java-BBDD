@@ -1,4 +1,5 @@
 package control;
+
 import servicios.iServiciosPelicula;
 import servicios.ServiciosPelicula;
 import datos.iDatosPelicula;
@@ -7,16 +8,29 @@ import modelo.Pelicula;
 import gui.Menu;
 import modelo.Pelicula;
 import utilidades.LeerTeclado;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+/**
+ * 
+ * @author Luis Nombre de clase: LeerTeclado Descripcion: Metodos para
+ *         seleccionar opciones del menú Fecha: 11/06/2019
+ * @version: v1.0
+ *
+ */
 
 public class MovieFlixx {
 
 	iServiciosPelicula servicios = new ServiciosPelicula();
-	
+
 	public MovieFlixx() {
+
 		super();
+		final Logger logger = LogManager.getLogger("Mensaje");
 	}
 
 	public void seleccionarOpcion() {
+		final Logger logger = LogManager.getLogger("Mensaje");
 		Menu m = new Menu();
 		m.mostrarMenu();
 		LeerTeclado leer = new LeerTeclado();
@@ -92,6 +106,7 @@ public class MovieFlixx {
 	}
 
 	public int leerOpcion() {
+		final Logger logger = LogManager.getLogger("Mensaje");
 		LeerTeclado leer = new LeerTeclado();
 		int opc = leer.leerInt();
 		return opc;
