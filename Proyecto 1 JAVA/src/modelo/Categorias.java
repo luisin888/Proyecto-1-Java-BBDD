@@ -29,4 +29,20 @@ public enum Categorias {
 		return categorias;
 	}
 
+	public static  Categorias parseCategoria(int num) {
+        if(num==1) {
+        	return Categorias.POLICIACA;
+        }else if(num==2) {
+        	return Categorias.ROMANTICA;
+        }else if(num==3) {
+        	return Categorias.AVENTURA;
+        }else if(num==4) {
+        	return Categorias.ANIMACION;
+        }else if(num==5) {
+        	return Categorias.COMEDIA;
+        }else if(num==6) {
+        	return Categorias.THRILLER;
+        }
+        return Categorias.AVENTURA;
+    }
 }

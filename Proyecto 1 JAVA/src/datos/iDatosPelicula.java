@@ -1,20 +1,20 @@
 package datos;
 
+import java.sql.SQLException;
+
+import dao.DAOException;
 import modelo.Pelicula;
 
 public interface iDatosPelicula {
 
 	
-	public void addPelicula(Pelicula p);
-	public void addPelicula();
+	public void addPelicula(Pelicula p) throws SQLException;
 	
-	public int encontrarPelicula(Pelicula p);
+	public Pelicula  encontrarPelicula(int id)throws DAOException;
 	
-	public void eliminarPelicula();
-	public void eliminarPelicula(Pelicula p);
+	public void eliminarPelicula(int id)throws DAOException;
 	
-	public void modificarPelicula();
-	public void modificarPelicula(Pelicula p);
+	public void modificarPelicula(Pelicula p)throws DAOException;
 	
 	public void listado();
 	
