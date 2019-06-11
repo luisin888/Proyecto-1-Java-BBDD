@@ -36,7 +36,7 @@ public class DatosPelicula implements iDatosPelicula{
 	public void addPelicula(Pelicula p) {
 		try(Statement stmt = con.createStatement()){
 			String query = "INSERT INTO PELICULAS VALUES (" + p.getNombre() +","
-			+
+			+ 
 		}
 	}
 
