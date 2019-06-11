@@ -33,7 +33,7 @@ public class ServiciosUsuario implements iServiciosUsuario {
 		datos.addUsuario();
 	}
 
-	public void listado() throws SQLException {
+	public void listadoUsuario() throws SQLException {
 		final Logger logger = LogManager.getLogger("Mensaje");
 		datos.listadoUsuario();
 	}
