@@ -15,16 +15,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import dao.ConexionDB;
+import dao.DAOException;
 import modelo.Pelicula;
 import utilidades.LeerTeclado;
 
 public class DatosPelicula implements iDatosPelicula{
 
 	//private List<Pelicula> peliculas = new ArrayList<>();
-
-	private List<Pelicula> peliculas = new ArrayList<>();
-	private static final Logger logger = LogManager.getLogger("Servicios");
-
 	
     private Connection con = null;
 
@@ -33,10 +30,15 @@ public class DatosPelicula implements iDatosPelicula{
         con = new ConexionDB().getConnection();
     }
 	
-	public void addPelicula(Pelicula p) {
+	public void addPelicula(Pelicula p) throws SQLException {
 		try(Statement stmt = con.createStatement()){
 			String query = "INSERT INTO PELICULAS VALUES (" + p.getNombre() +","
-			+ 
+					+ "'" + p.getAnioEstreno() + "'," + "'" + p.getCategoria();
+			if(stmt.executeUpdate(query)!=1) {
+				throw new DAOException("Error adding films");
+			}
+		}catch(SQLException se ) {
+			 throw new DAOException("Error adding film in DAO", se);
 		}
 	}
 
@@ -46,9 +48,7 @@ public class DatosPelicula implements iDatosPelicula{
 	        //addPelicula(p);
 	//}
 	
-	@SuppressWarnings("null")
 	public int encontrarPelicula(Pelicula p) {
-	try {
 	
 	int encontrado =-1;
 		for(int i=0;i<peliculas.size();i++) {
@@ -59,16 +59,9 @@ public class DatosPelicula implements iDatosPelicula{
 				encontrado = i;
 			}
 		}
-		return encontrado; } catch (Exception e) {
-		
-			logger.info("la película NO se ha dado de alta ");
-			System.out.println("No se ha podido realizar el alta de la película");
-						
-		}
-	
-	return (Integer) null;
-	 
+		return encontrado;
 	}
+						
 
 	public void eliminarPelicula() {
 		System.out.println("--Pido datos del objeto a eliminar");
