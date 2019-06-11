@@ -1,5 +1,5 @@
 package datos;
-<<<<<<< HEAD
+
 
 /**
  * @autor Raul
@@ -10,9 +10,8 @@ package datos;
  * 
  * @version v1.0
  */
-=======
 
->>>>>>> branch 'master' of https://github.com/luisin888/Proyecto-1-Java-BBDD.git
+
 import java.sql.Connection;
 import java.sql.SQLException;
 
