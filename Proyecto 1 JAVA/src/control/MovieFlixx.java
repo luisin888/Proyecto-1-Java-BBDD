@@ -4,9 +4,11 @@ import dao.DAOException;
 import java.sql.SQLException;
 import servicios.iServiciosPelicula;
 import servicios.ServiciosPelicula;
+import servicios.ServiciosUsuario;
 import modelo.Pelicula;
 import datos.DatosPelicula;
-
+import modelo.Usuario;
+import datos.DatosUsuario;
 import gui.Menu;
 import utilidades.LeerTeclado;
 import org.apache.logging.log4j.LogManager;
@@ -21,8 +23,9 @@ import org.apache.logging.log4j.Logger;
  */
 
 public class MovieFlixx {
-	
+	Usuario u = new Usuario();
 	Pelicula p = new Pelicula();
+	DatosUsuario du = new DatosUsuario();
 	DatosPelicula d = new DatosPelicula();
 	ServiciosPelicula servicios = new ServiciosPelicula();
 
@@ -46,6 +49,14 @@ public class MovieFlixx {
 			case 1:
 				// AltaUsuariooo
 				System.out.println("caso 1");
+				
+				u.crearUsuario();
+				try {
+					du.addUsuario(u);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				break;
 
 			case 2:
@@ -61,6 +72,7 @@ public class MovieFlixx {
 			case 4:
 				// ListarUsuarios
 				System.out.println("caso 4");
+				
 				break;
 			case 5:
 				// CrearPeliculasNuevas

@@ -22,7 +22,7 @@ public class DatosUsuario implements iDatosUsuario {
 	
 	public void addUsuario(Usuario u) throws SQLException {
 		try(Statement stmt = con.createStatement()){
-			String query = "INSERT INTO usuarios VALUES ('" + u.getNombreCompleto() +"',"
+			String query = "INSERT INTO usuarios(nombrecompleto,fecha_nac,ciudad_residencia) VALUES ('" + u.getNombreCompleto() +"',"
 					+ "'" + u.getFechaNacimiento() + "'," + "'" + u.getCiudad()+"')";
 			System.out.println(query);
 			if(stmt.executeUpdate(query)!=1) {
@@ -44,7 +44,7 @@ public class DatosUsuario implements iDatosUsuario {
 			if (!rs.next()) {
 				return null;
 			}
-			return (new Usuario(rs.getString("nombrecompleto"), rs.getDate("fecha_nac"),
+			return (new Usuario(rs.getString("nombrecompleto"), rs.getString("fecha_nac"),
 					rs.getString("ciudad_residencia")));
 		} catch (SQLException se) {
 			throw new DAOException("Error finding film in DAO", se);
