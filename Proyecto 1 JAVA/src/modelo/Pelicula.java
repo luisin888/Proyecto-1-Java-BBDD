@@ -13,8 +13,10 @@ public class Pelicula {
 	public Pelicula() {
 		super();
 	}
-	public Pelicula(String nombre) {
+	public Pelicula(String nombre,int anioEstreno,Categorias categoria) {
 		this.nombre=nombre;
+		this.anioEstreno=anioEstreno;
+		this.categoria=categoria;
 	}
 	
 	public String getNombre() {
@@ -58,5 +60,6 @@ public class Pelicula {
         	this.categoria=categoria.THRILLER;
         }
     }
+
 
 }
