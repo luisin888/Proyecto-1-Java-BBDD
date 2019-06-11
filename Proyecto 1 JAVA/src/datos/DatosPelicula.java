@@ -2,6 +2,11 @@ package datos;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.SQLException;
+
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import modelo.Pelicula;
 import utilidades.LeerTeclado;
@@ -22,7 +27,9 @@ public class DatosPelicula implements iDatosPelicula{
 	}
 	
 	public int encontrarPelicula(Pelicula p) {
-		int encontrado =-1;
+	try {
+	
+	int encontrado =-1;
 		for(int i=0;i<peliculas.size();i++) {
 			Pelicula pelicula = peliculas.get(i);
 			System.out.println("--" + pelicula.getNombre());
@@ -31,7 +38,14 @@ public class DatosPelicula implements iDatosPelicula{
 				encontrado = i;
 			}
 		}
-		return encontrado;
+		return encontrado; } catch (SQLException e) {
+		
+			logger.info("la película NO se ha dado de alta ");
+			System.out.println("No se ha podido realizar el alta de la película");
+			
+		}
+	
+	
 	}
 
 	public void eliminarPelicula() {
