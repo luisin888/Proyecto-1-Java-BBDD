@@ -57,7 +57,6 @@ public class Pelicula {
         }else if(num==6) {
         	this.categoria=categoria.THRILLER;
         }
-        this.categoria = categoria.getCategorias();
     }
 
 }
