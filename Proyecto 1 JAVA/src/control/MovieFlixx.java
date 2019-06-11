@@ -62,7 +62,7 @@ public class MovieFlixx {
 			case 5:
 				// CrearPeliculasNuevas
 				System.out.println("caso 5");
-				servicios.addPelicula();
+				servicios.addPelicula(p);
 				break;
 			case 6:
 				// ListarPeliculas
