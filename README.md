@@ -1,8 +1,23 @@
-# Proyecto-1-Java-BBDD Junio 2019
+# Proyecto-1-Java-BBDD Luca Tic Formación Java Junio 2019
 
-Grupo formado por: David, Luis, Raul y Andrea
+Grupo formado por: David, Luis, Raul y Andrea ----
+Desarrollo de programa en Java para gestión y administracción de BBDD
 
-<h1>Tareas realizadas Sprint 1</h1>
+<h1>BACKLOG</h1>
+
+1- Alta usuario<br />
+2- Modificar usuario<br />
+3- Dar de baja usuario <br />
+4- Listar todos los usuarios <br />
+5- Crear peliculas nuevas <br />
+6- Listar peliculas <br />
+7- Dar de baja usuario <br />
+8- Listar peliculas por categoria<br />
+9- Listar peliculas mejor valoradas<br />
+10-Listar peliculas vistas por usuario<br />
+11-Borrar pelicula<br />
+
+<h2>Tareas realizadas Sprint 1</h2>
 
 <h3>0-Tareas generales</h3>
 0.1 Generar JavaDoc <br />
