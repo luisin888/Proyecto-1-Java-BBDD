@@ -1,7 +1,5 @@
 package datos;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -18,42 +16,38 @@ import dao.ConexionDB;
 import dao.DAOException;
 import modelo.Categorias;
 import modelo.Pelicula;
-import utilidades.LeerTeclado;
 
 public class DatosPelicula implements iDatosPelicula{
 
 	//private List<Pelicula> peliculas = new ArrayList<>();
 	
-    private Connection con = null;
-
-    DatosPelicula() {
-
-        con = new ConexionDB().getConnection();
-    }
+    private Connection con = new ConexionDB().getConnection();
+    
 	
 	public void addPelicula(Pelicula p) throws SQLException {
 		try(Statement stmt = con.createStatement()){
-			String query = "INSERT INTO PELICULAS VALUES (" + p.getNombre() +","
-					+ "'" + p.getAnioEstreno() + "'," + "'" + p.getCategoria();
+			String query = "INSERT INTO peliculas VALUES ('" + p.getNombre() +"',"
+					+ "'" + p.getAnioEstreno() + "'," + "'" + p.getCategoria()+"')";
+			System.out.println(query);
 			if(stmt.executeUpdate(query)!=1) {
 				throw new DAOException("Error adding films");
 			}
 		}catch(SQLException se ) {
-			 throw new DAOException("Error adding film in DAO", se);
+			 //throw new DAOException("Error adding film in DAO", se);
+		}catch(DAOException e) {
+			
 		}
 	}
 	
 	public Pelicula encontrarPelicula(int id)throws DAOException {
 		try(Statement stmt = con.createStatement()){
-			String query = "SELECT * FROM PELICULAS WHERE ID="+ id;
+			String query = "SELECT * FROM peliculas WHERE ID="+ id;
 			ResultSet rs = stmt.executeQuery(query);
 			if(!rs.next()) {
 				return null;
 			}
-			int valor = rs.getInt("categoria");
-			Categorias cat = Categorias.parseCategoria(valor);
 			return (new Pelicula(rs.getString("nombrepeli"), rs.getInt("anno"),
-					cat));
+					rs.getInt("categoria")));
 		}catch(SQLException se) {
 			throw new DAOException("Error finding film in DAO", se);
 		}
@@ -66,7 +60,7 @@ public class DatosPelicula implements iDatosPelicula{
 			throw new DAOException("Film id: " + id + " does not exist to delete.");
 		}
 		try(Statement stmt = con.createStatement()){
-			String query = "DELETE FROM PELICULAS WHERE ID=" + id;
+			String query = "DELETE FROM peliculas WHERE ID=" + id;
 			if(stmt.executeUpdate(query)!=1) {
 				throw new DAOException("Error deleting film");
 			}
@@ -93,4 +87,5 @@ public class DatosPelicula implements iDatosPelicula{
 	public void listado() {
 
 	}
+
 }
