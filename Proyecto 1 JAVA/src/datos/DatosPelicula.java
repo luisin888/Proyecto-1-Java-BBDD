@@ -14,7 +14,6 @@ import org.apache.logging.log4j.Logger;
 
 import dao.ConexionDB;
 import dao.DAOException;
-import modelo.Categorias;
 import modelo.Pelicula;
 
 public class DatosPelicula implements iDatosPelicula{

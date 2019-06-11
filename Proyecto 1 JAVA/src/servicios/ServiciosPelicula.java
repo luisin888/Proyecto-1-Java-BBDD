@@ -14,6 +14,9 @@ public class ServiciosPelicula implements iServiciosPelicula{
 	public void addPelicula(Pelicula p) throws SQLException {
 		datos.addPelicula(p);
 	}
+	public void addPelicula() throws SQLException {
+		datos.addPelicula();
+	}
 	
 	public void listado(){
 		datos.listado();
