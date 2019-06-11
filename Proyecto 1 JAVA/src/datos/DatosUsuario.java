@@ -67,7 +67,38 @@ public class DatosUsuario implements iDatosUsuario {
 		}
 	}
 	
+	public void eliminarUsuario() throws DAOException {
+		
+	}
 	
+	public void modificarUsuario(Usuario u) throws DAOException {
+		final Logger logger = LogManager.getLogger("Mensaje");
+		try (Statement stmt = con.createStatement()) {
+			String query = "UPDATE usuarios" + "SET nombrecompleto='" + u.getNombreCompleto() + "'," + "SET fecha_nac"
+					+ u.getFechaNacimiento() + "'," + "SET ciudad_residencia" + u.getCiudad();
+			if (stmt.executeUpdate(query) != 1) {
+				throw new DAOException("Error updating usuario");
+			}
+		} catch (SQLException se) {
+			throw new DAOException("Error updating usuario in DAO", se);
+		}
+
+	}
+	
+	public void modificarUsuario() throws DAOException {
+		
+	}
+	
+	public void listadoUsuario() throws SQLException {
+		final Logger logger = LogManager.getLogger("Mensaje");
+		Statement stmt = con.createStatement();
+		String query = "select * from usuarios";
+		ResultSet rs = stmt.executeQuery(query);
+		while (rs.next()) {
+			System.out.print(rs.getInt("id_usuario") + ", " + rs.getString("nombrecompleto") + ", " + rs.getDate("fecha_nac")
+					+ ", " + rs.getString("ciudad_residencia") + "\n");
+		}
+	}
 	
 	
 }
