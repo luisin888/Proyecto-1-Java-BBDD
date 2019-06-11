@@ -23,7 +23,9 @@ import org.apache.logging.log4j.Logger;
  */
 
 public class MovieFlixx {
-
+	
+	Pelicula p = new Pelicula();
+	DatosPelicula d = new DatosPelicula();
 	iServiciosPelicula servicios = new ServiciosPelicula();
 
 	public MovieFlixx() {
@@ -65,9 +67,7 @@ public class MovieFlixx {
 			case 5:
 				// CrearPeliculasNuevas
 				System.out.println("caso 5");
-				Pelicula p = new Pelicula();
 				p.crearPelicula();
-				DatosPelicula d = new DatosPelicula();
 				try {
 					d.addPelicula(p);
 				} catch (SQLException e) {
@@ -100,7 +100,6 @@ public class MovieFlixx {
 			case 11:
 				// BorrarPeliculasss
 				System.out.println("caso 11");
-				
 				servicios.eliminarPelicula();
 				break;
 			case 12:

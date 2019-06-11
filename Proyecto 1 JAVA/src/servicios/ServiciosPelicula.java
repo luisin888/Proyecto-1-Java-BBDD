@@ -19,7 +19,7 @@ public class ServiciosPelicula implements iServiciosPelicula{
 		datos.addPelicula();
 	}
 	
-	public void listado(){
+	public void listado() throws SQLException{
 		datos.listado();
 	}
 	

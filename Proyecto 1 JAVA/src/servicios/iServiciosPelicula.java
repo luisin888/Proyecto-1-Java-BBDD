@@ -15,5 +15,5 @@ public interface iServiciosPelicula {
 	public void modificarPelicula(Pelicula p)throws DAOException;
 	public void modificarPelicula()throws DAOException;
 	
-	public void listado();
+	public void listado() throws SQLException;
 }
