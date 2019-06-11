@@ -1,5 +1,6 @@
 package control;
-
+import servicios.iServiciosPelicula;
+import servicios.ServiciosPelicula;
 import datos.iDatosPelicula;
 import modelo.Pelicula;
 
@@ -9,6 +10,8 @@ import utilidades.LeerTeclado;
 
 public class MovieFlixx {
 
+	iServiciosPelicula servicios = new ServiciosPelicula();
+	
 	public MovieFlixx() {
 		super();
 	}
@@ -45,10 +48,12 @@ public class MovieFlixx {
 			case 5:
 				// CrearPeliculasNuevas
 				System.out.println("caso 5");
+				servicios.addPelicula();
 				break;
 			case 6:
 				// ListarPeliculas
 				System.out.println("caso 6");
+				servicios.listado();
 				break;
 			case 7:
 				// ListarPeliculasPorCategoria
@@ -69,10 +74,12 @@ public class MovieFlixx {
 			case 11:
 				// BorrarPeliculasss
 				System.out.println("caso 11");
+				servicios.eliminarPelicula();
 				break;
 			case 12:
 				// ModificarPeliculas
 				System.out.println("caso 12");
+				servicios.modificarPelicula();
 				break;
 			default:
 				break;
