@@ -32,10 +32,8 @@ public class DatosPelicula implements iDatosPelicula{
 			if(stmt.executeUpdate(query)!=1) {
 				throw new DAOException("Error adding films");
 			}
-		}catch(SQLException se ) {
-			 //throw new DAOException("Error adding film in DAO", se);
-		}catch(DAOException e) {
-			
+		}catch(DAOException e ) {
+			 
 		}
 	}
 	
@@ -71,7 +69,7 @@ public class DatosPelicula implements iDatosPelicula{
 	
 	public void modificarPelicula(Pelicula p)throws DAOException {
 		try(Statement stmt = con.createStatement()){
-			String query = "UPDATE PELICULAS"
+			String query = "UPDATE peliculas"
 					+ "SET nombrepeli='" + p.getNombre() + "',"
 					+ "SET anno" + p.getAnioEstreno() + "',"
 					+ "SET categoria" + p.getCategoria();

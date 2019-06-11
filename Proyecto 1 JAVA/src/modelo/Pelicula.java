@@ -45,8 +45,7 @@ public class Pelicula {
         int num=0;
 		this.nombre = LeerTeclado.leerLinea("Introduzca el nombre:");
         this.anioEstreno = LeerTeclado.leerInt("Introduzca el año");
-        this.categoria =LeerTeclado.leerInt("Categoría: Policiaca(1) - Romantica(2) - Aventura (3) - Comedia (4) - Animación (5) - Thriller (6()");
-       
+        this.categoria =LeerTeclado.leerInt("Categoría: Policiaca(1) - Romantica(2) - Aventura (3) - Comedia (4) - Animación (5) - Thriller (6()");  
     }
 
 
