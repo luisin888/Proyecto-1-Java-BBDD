@@ -1,5 +1,6 @@
 package control;
 
+import java.sql.SQLException;
 import servicios.iServiciosPelicula;
 import servicios.ServiciosPelicula;
 import datos.iDatosPelicula;

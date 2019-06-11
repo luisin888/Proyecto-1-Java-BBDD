@@ -36,6 +36,10 @@ public class DatosPelicula implements iDatosPelicula{
 		}
 	}
 	
+	public void addPelicula()throws SQLException {
+		
+	}
+	
 	public Pelicula encontrarPelicula(int id)throws DAOException {
 		try(Statement stmt = con.createStatement()){
 			String query = "SELECT * FROM peliculas WHERE ID="+ id;
@@ -66,6 +70,10 @@ public class DatosPelicula implements iDatosPelicula{
 		}
 	}
 	
+	public void eliminarPelicula()throws DAOException {
+		
+	}
+	
 	public void modificarPelicula(Pelicula p)throws DAOException {
 		try(Statement stmt = con.createStatement()){
 			String query = "UPDATE peliculas"
@@ -79,6 +87,10 @@ public class DatosPelicula implements iDatosPelicula{
 			throw new DAOException("Error updating film in DAO", se);
 		}
         
+	}
+	
+	public void modificarPelicula()throws DAOException {
+		
 	}
 	
 	public void listado() {
