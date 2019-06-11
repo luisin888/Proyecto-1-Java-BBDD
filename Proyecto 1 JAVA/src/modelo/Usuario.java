@@ -1,58 +1,77 @@
 package modelo;
 
 import java.util.Date;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import utilidades.LeerTeclado;
+/**
+ * 
+ * @author Andrea
+ * Nombre de clase: ConexionDB 
+ * Descripcion: Conexión con base de datos
+ * Fecha: 10/06/2019 
+ * @version: v1.0
+ *
+ */
 
 public class Usuario {
-	
-		private String nombreCompleto;
-		private Date fechaNacimiento;
-		private String ciudad;
-		
-		 public Usuario () {
-			 super();
-		    }
-		    
-		    public Usuario (String nombreCompleto){
-		    	this.nombreCompleto = nombreCompleto;
-		    }
 
-		    public Usuario(String nombreCompleto, String ciudad, Date fechaNacimiento) {
-		    	this.nombreCompleto = nombreCompleto;
-		        this.ciudad = ciudad;
-		        this.fechaNacimiento = fechaNacimiento;
-		    }
+	private String nombreCompleto;
+	private Date fechaNacimiento;
+	private String ciudad;
 
-			public String getNombreCompleto() {
-				return nombreCompleto;
-			}
+	public Usuario() {
+		super();
+		final Logger logger = LogManager.getLogger("Mensaje");
+	}
 
-			public void setNombreCompleto(String nombreCompleto) {
-				this.nombreCompleto = nombreCompleto;
-			}
+	public Usuario(String nombreCompleto) {
+		final Logger logger = LogManager.getLogger("Mensaje");
+		this.nombreCompleto = nombreCompleto;
+	}
 
-			public Date getFechaNacimiento() {
-				return fechaNacimiento;
-			}
+	public Usuario(String nombreCompleto, String ciudad, Date fechaNacimiento) {
+		final Logger logger = LogManager.getLogger("Mensaje");
+		this.nombreCompleto = nombreCompleto;
+		this.ciudad = ciudad;
+		this.fechaNacimiento = fechaNacimiento;
+	}
 
-			public void setFechaNacimiento(Date fechaNacimiento) {
-				this.fechaNacimiento = fechaNacimiento;
-			}
+	public String getNombreCompleto() {
+		final Logger logger = LogManager.getLogger("Mensaje");
+		return nombreCompleto;
+	}
 
-			public String getCiudad() {
-				return ciudad;
-			}
+	public void setNombreCompleto(String nombreCompleto) {
+		final Logger logger = LogManager.getLogger("Mensaje");
+		this.nombreCompleto = nombreCompleto;
+	}
 
-			public void setCiudad(String ciudad) {
-				this.ciudad = ciudad;
-			}
+	public Date getFechaNacimiento() {
+		final Logger logger = LogManager.getLogger("Mensaje");
+		return fechaNacimiento;
+	}
 
-			@Override
-			public String toString() {
-				return "Usuario [nombreCompleto=" + nombreCompleto + ", fechaNacimiento=" + fechaNacimiento
-						+ ", ciudad=" + ciudad + "]";
-			}
-		    		
+	public void setFechaNacimiento(Date fechaNacimiento) {
+		final Logger logger = LogManager.getLogger("Mensaje");
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	public String getCiudad() {
+		final Logger logger = LogManager.getLogger("Mensaje");
+		return ciudad;
+	}
+
+	public void setCiudad(String ciudad) {
+		final Logger logger = LogManager.getLogger("Mensaje");
+		this.ciudad = ciudad;
+	}
+
+	@Override
+	public String toString() {
+		final Logger logger = LogManager.getLogger("Mensaje");
+		return "Usuario [nombreCompleto=" + nombreCompleto + ", fechaNacimiento=" + fechaNacimiento + ", ciudad="
+				+ ciudad + "]";
+	}
+
 }
-	
