@@ -4,6 +4,8 @@ import java.util.Date;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import utilidades.LeerTeclado;
+
 /**
  * 
  * @author Andrea
@@ -74,4 +76,11 @@ public class Usuario {
 				+ ciudad + "]";
 	}
 
+	public void crearUsuario() {
+		final Logger logger = LogManager.getLogger("Mensaje");
+		
+		this.nombreCompleto = LeerTeclado.leerLinea("Introduzca el nombre:");
+		this.fechaNacimiento = LeerTeclado.leer("Introduzca el año");
+		this.ciudad = LeerTeclado.leerLinea("Introduce Ciudad Residencia");
+	}
 }
