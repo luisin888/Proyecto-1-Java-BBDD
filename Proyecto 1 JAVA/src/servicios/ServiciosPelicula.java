@@ -21,7 +21,7 @@ import modelo.Pelicula;
 
 public class ServiciosPelicula implements iServiciosPelicula {
 
-	private iDatosPelicula datos = new DatosPelicula();
+	private DatosPelicula datos = new DatosPelicula();
 
 	public void addPelicula(Pelicula p) throws SQLException {
 		final Logger logger = LogManager.getLogger("Mensaje");

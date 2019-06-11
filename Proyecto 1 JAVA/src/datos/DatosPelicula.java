@@ -24,6 +24,7 @@ import org.apache.logging.log4j.Logger;
 import dao.ConexionDB;
 import dao.DAOException;
 import modelo.Pelicula;
+import utilidades.LeerTeclado;
 
 public class DatosPelicula implements iDatosPelicula {
 
@@ -52,16 +53,17 @@ public class DatosPelicula implements iDatosPelicula {
 
 	public Pelicula encontrarPelicula(int id) throws DAOException {
 		final Logger logger = LogManager.getLogger("Mensaje");
+		Pelicula p = new Pelicula();
 		try (Statement stmt = con.createStatement()) {
-			String query = "SELECT * FROM peliculas WHERE ID=" + id;
+			String query = "SELECT * FROM peliculas WHERE id_pelicula=" + id;
 			ResultSet rs = stmt.executeQuery(query);
-			if (!rs.next()) {
-				return null;
+			if (rs.next()) {
+				 p = new Pelicula(rs.getString("nombrepeli"), rs.getInt("anno"), rs.getInt("categoria"));
 			}
-			return (new Pelicula(rs.getString("nombrepeli"), rs.getInt("anno"), rs.getInt("categoria")));
 		} catch (SQLException se) {
 			throw new DAOException("Error finding film in DAO", se);
 		}
+		return p;
 	}
 
 	public void eliminarPelicula(int id) throws DAOException {
@@ -71,7 +73,7 @@ public class DatosPelicula implements iDatosPelicula {
 			throw new DAOException("Film id: " + id + " does not exist to delete.");
 		}
 		try (Statement stmt = con.createStatement()) {
-			String query = "DELETE FROM peliculas WHERE ID=" + id;
+			String query = "DELETE FROM peliculas WHERE id_pelicula=" + id;
 			if (stmt.executeUpdate(query) != 1) {
 				throw new DAOException("Error deleting film");
 			}
@@ -81,7 +83,8 @@ public class DatosPelicula implements iDatosPelicula {
 	}
 
 	public void eliminarPelicula() throws DAOException {
-
+		int id=LeerTeclado.leerInt("dime la id a eliminar");
+		eliminarPelicula(id);
 	}
 
 	public void modificarPelicula(Pelicula p) throws DAOException {

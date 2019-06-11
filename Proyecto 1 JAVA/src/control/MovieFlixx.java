@@ -24,7 +24,7 @@ public class MovieFlixx {
 	
 	Pelicula p = new Pelicula();
 	DatosPelicula d = new DatosPelicula();
-	iServiciosPelicula servicios = new ServiciosPelicula();
+	ServiciosPelicula servicios = new ServiciosPelicula();
 
 	public MovieFlixx() {
 
@@ -99,6 +99,7 @@ public class MovieFlixx {
 				// BorrarPeliculasss
 				System.out.println("caso 11");
 				servicios.eliminarPelicula();
+				
 				break;
 			case 12:
 				// ModificarPeliculas
