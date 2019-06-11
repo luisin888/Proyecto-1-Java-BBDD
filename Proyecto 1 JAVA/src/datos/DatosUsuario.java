@@ -15,6 +15,7 @@ import dao.ConexionDB;
 import dao.DAOException;
 import modelo.Pelicula;
 import modelo.Usuario;
+import utilidades.LeerTeclado;
 
 public class DatosUsuario implements iDatosUsuario {
 
@@ -38,17 +39,19 @@ public class DatosUsuario implements iDatosUsuario {
 	}
 	public Usuario encontrarUsuario(int id) throws DAOException {
 		final Logger logger = LogManager.getLogger("Mensaje");
+		Usuario u = new Usuario();
 		try (Statement stmt = con.createStatement()) {
-			String query = "SELECT * FROM usuario WHERE ID=" + id;
+			String query = "SELECT * FROM usuarios WHERE id_usuario=" + id;
 			ResultSet rs = stmt.executeQuery(query);
-			if (!rs.next()) {
-				return null;
+			if (rs.next()) {
+				u=new Usuario(rs.getString("nombrecompleto"), rs.getString("fecha_nac"),
+						rs.getString("ciudad_residencia"));
 			}
-			return (new Usuario(rs.getString("nombrecompleto"), rs.getString("fecha_nac"),
-					rs.getString("ciudad_residencia")));
+			
 		} catch (SQLException se) {
 			throw new DAOException("Error finding film in DAO", se);
 		}
+		return u;
 	}
 	
 	public void eliminarUsuario(int id) throws DAOException {
@@ -58,7 +61,7 @@ public class DatosUsuario implements iDatosUsuario {
 			throw new DAOException("usuario id: " + id + " does not exist to delete.");
 		}
 		try (Statement stmt = con.createStatement()) {
-			String query = "DELETE FROM usuario WHERE ID=" + id;
+			String query = "DELETE FROM usuarios WHERE id_usuario=" + id;
 			if (stmt.executeUpdate(query) != 1) {
 				throw new DAOException("Error deleting usuario");
 			}
@@ -68,7 +71,8 @@ public class DatosUsuario implements iDatosUsuario {
 	}
 	
 	public void eliminarUsuario() throws DAOException {
-		
+		int id = LeerTeclado.leerInt("Dime la Id de Usuario a Eliminar: ");
+				eliminarUsuario(id);
 	}
 	
 	public void modificarUsuario(Usuario u) throws DAOException {

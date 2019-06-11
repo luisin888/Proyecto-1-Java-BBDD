@@ -67,6 +67,7 @@ public class MovieFlixx {
 			case 3:
 				// DarDeBajaUsuario
 				System.out.println("caso 3");
+				serviciosUsuario.eliminarUsuario();
 				break;
 
 			case 4:
