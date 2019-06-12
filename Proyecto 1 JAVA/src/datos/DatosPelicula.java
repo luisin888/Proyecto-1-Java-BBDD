@@ -35,7 +35,7 @@ public class DatosPelicula implements iDatosPelicula {
 	public void addPelicula(Pelicula p) throws SQLException {
 		final Logger logger = LogManager.getLogger("Mensaje");
 		try (Statement stmt = con.createStatement()) {
-			System.out.println("eeEEEEE");
+		
 			String query = "INSERT INTO peliculas(nombrepeli,anno,categoria) VALUES ('" + p.getNombre() + "'," + "'"
 					+ p.getAnioEstreno() + "'," + "'" + p.getCategoria() + "')";
 			System.out.println(query);
@@ -43,6 +43,8 @@ public class DatosPelicula implements iDatosPelicula {
 				throw new DAOException("Error adding films");
 			}
 		} catch (DAOException e) {
+			logger.error("La pelicula no se ha añadido ");
+			System.out.println("La peicula no ha sido añadida");
 
 		}
 	}
@@ -62,7 +64,9 @@ public class DatosPelicula implements iDatosPelicula {
 				p = new Pelicula(rs.getString("nombrepeli"), rs.getInt("anno"), rs.getInt("categoria"));
 			}
 		} catch (SQLException se) {
-			throw new DAOException("Error finding film in DAO", se);
+			
+			logger.error("No se ha podido econtar la pelicula ");
+			System.out.println("No se ha encontrado la pelicula");
 		}
 		return p;
 	}
@@ -79,7 +83,8 @@ public class DatosPelicula implements iDatosPelicula {
 				throw new DAOException("Error deleting film");
 			}
 		} catch (SQLException se) {
-			throw new DAOException("Error deleting film in DAO", se);
+			logger.error("No se ha podido eliminar la pelicula ");
+			System.out.println("No se ha eliminado la pelicula");
 		}
 	}
 
@@ -104,7 +109,8 @@ public class DatosPelicula implements iDatosPelicula {
 				throw new DAOException("Error updating film");
 			}
 		} catch (SQLException se) {
-			throw new DAOException("Error updating film in DAO", se);
+			logger.error("No se ha podido modificar la pelicula ");
+			System.out.println("No se ha modificado la pelicula");
 		}
 
 	}
