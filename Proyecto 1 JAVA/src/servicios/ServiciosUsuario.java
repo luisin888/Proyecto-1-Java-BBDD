@@ -48,9 +48,9 @@ public class ServiciosUsuario implements iServiciosUsuario {
 		datos.eliminarUsuario();
 	}
 
-	public void modificarUsuario(Usuario u) throws DAOException {
+	public void modificarUsuario(int id) throws DAOException {
 		final Logger logger = LogManager.getLogger("Mensaje");
-		datos.modificarUsuario(u);
+		datos.modificarUsuario(id);
 	}
 
 	public void modificarUsuario() throws DAOException {

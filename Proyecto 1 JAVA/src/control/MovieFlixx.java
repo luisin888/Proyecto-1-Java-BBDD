@@ -62,6 +62,7 @@ public class MovieFlixx {
 			case 2:
 				// ModificarUsuario
 				System.out.println("caso 2");
+				serviciosUsuario.modificarUsuario();
 				break;
 
 			case 3:
