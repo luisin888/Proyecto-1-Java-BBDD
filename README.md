@@ -104,8 +104,6 @@ Desarrollo de programa en Java para gestión y administracción de BBDD
 12.6 Modificar clase "ServiciosPelicula"<br />
 12.7 Modificar clase con iDatosPelicula<br />
 
-
-<h3>10-Listas peliculas vistas por usuario</h3>
 <br />
 <br />
 <br />
