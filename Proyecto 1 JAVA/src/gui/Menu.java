@@ -5,11 +5,8 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * 
- * @author Luis 
- * Nombre de clase: Menu 
- * Descripcion: Menu 
- * Principal donde elegiremos una opcion 
- * Fecha: 11/06/2019 
+ * @author Luis Nombre de clase: Menu Descripcion: Menu Principal donde
+ *         elegiremos una opcion Fecha: 11/06/2019
  * @version: v1.0
  *
  */
@@ -29,10 +26,10 @@ public class Menu {
 		System.out.println("*    4.-Listar TODOS los Usuarios");
 		System.out.println("*    5.-Añadir Pelicula Nueva");
 		System.out.println("*    6.-Listar TODAS las Peliculas");
-		System.out.println("*    7.-Listar Peliculas Por Categoria");
-		System.out.println("*    8.-Listar Peliculas Mas Vistas");
-		System.out.println("*    9.-Listar Peliculas Mejor Valoradas");
-		System.out.println("*    10.-Listar Peliculas Vistas Por el Usuario");
+		System.out.println("*    7.-Listar Peliculas Por Categoria (TRABAJANDO EN ELLO...)");
+		System.out.println("*    8.-Listar Peliculas Mas Vistas (TRABAJANDO EN ELLO...)");
+		System.out.println("*    9.-Listar Peliculas Mejor Valoradas (TRABAJANDO EN ELLO...)");
+		System.out.println("*    10.-Listar Peliculas Vistas Por el Usuario (TRABAJANDO EN ELLO...)");
 		System.out.println("*    11.-Borrar una Pelicula");
 		System.out.println("*    12.-Modificar una Pelicula");
 

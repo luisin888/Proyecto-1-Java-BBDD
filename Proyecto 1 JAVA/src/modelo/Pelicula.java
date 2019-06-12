@@ -6,10 +6,8 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * 
- * @author Andrea
- * Nombre de clase: ConexionDB 
- * Descripcion: Conexi�n con base de datos
- * Fecha: 10/06/2019 
+ * @author Andrea Nombre de clase: ConexionDB Descripcion: Conexi�n con base de
+ *         datos Fecha: 10/06/2019
  * @version: v1.0
  *
  */

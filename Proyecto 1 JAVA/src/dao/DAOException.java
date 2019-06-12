@@ -5,11 +5,16 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * 
+<<<<<<< HEAD
  * @author Raul 
  * Nombre de clase: Menu 
  * Descripcion: Menu 
  * Principal donde elegiremos una opcion 
  * Fecha: 11/06/2019 
+=======
+ * @author Ra�l Nombre de clase: Menu Descripcion: Menu Principal donde
+ *         elegiremos una opcion Fecha: 11/06/2019
+>>>>>>> branch 'master' of https://github.com/luisin888/Proyecto-1-Java-BBDD.git
  * @version: v1.0
  *
  */
