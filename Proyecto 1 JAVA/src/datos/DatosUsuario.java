@@ -80,7 +80,7 @@ public class DatosUsuario implements iDatosUsuario {
 		Usuario u = encontrarUsuario(id);
 		try (Statement stmt = con.createStatement()) {
 			String query = "UPDATE usuarios" + "SET nombrecompleto='" + u.getNombreCompleto() + "'," + "SET fecha_nac" + "'"
-					+ u.getFechaNacimiento() + "'," + "SET ciudad_residencia"+"'" + u.getCiudad()+"'";
+					+ u.getFechaNacimiento() + "'," + "SET ciudad_residencia"+"'" + u.getCiudad()+"'"+"WHERE id_usuario=" + id;
 			if (stmt.executeUpdate(query) != 1) {
 				throw new DAOException("Error updating usuario");
 			}
