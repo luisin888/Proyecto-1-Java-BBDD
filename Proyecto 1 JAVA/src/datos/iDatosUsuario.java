@@ -25,7 +25,7 @@ public interface iDatosUsuario {
 	public void eliminarUsuario(int id) throws DAOException;
 	public void eliminarUsuario() throws DAOException;
 
-	public void modificarUsuario(Usuario u) throws DAOException;
+	public void modificarUsuario(int id) throws DAOException;
 	public void modificarUsuario() throws DAOException;
 
 	public void listadoUsuario() throws SQLException;
