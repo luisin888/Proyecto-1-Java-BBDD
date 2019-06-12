@@ -29,6 +29,7 @@ public class MovieFlixx {
 	DatosPelicula d = new DatosPelicula();
 	ServiciosPelicula servicios = new ServiciosPelicula();
 	ServiciosUsuario serviciosUsuario = new ServiciosUsuario();
+
 	public MovieFlixx() {
 
 		super();
@@ -49,7 +50,7 @@ public class MovieFlixx {
 			case 1:
 				// AltaUsuariooo
 				System.out.println("caso 1");
-				
+
 				u.crearUsuario();
 				try {
 					du.addUsuario(u);
@@ -74,7 +75,7 @@ public class MovieFlixx {
 			case 4:
 				// ListarUsuarios
 				System.out.println("caso 4");
-			    serviciosUsuario.listadoUsuario();
+				serviciosUsuario.listadoUsuario();
 				break;
 			case 5:
 				// CrearPeliculasNuevas
@@ -86,7 +87,7 @@ public class MovieFlixx {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				//servicios.addPelicula(p);
+				// servicios.addPelicula(p);
 				break;
 			case 6:
 				// ListarPeliculas
@@ -113,7 +114,7 @@ public class MovieFlixx {
 				// BorrarPeliculasss
 				System.out.println("caso 11");
 				servicios.eliminarPelicula();
-				
+
 				break;
 			case 12:
 				// ModificarPeliculas
