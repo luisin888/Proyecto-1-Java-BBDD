@@ -80,6 +80,5 @@ public class Usuario {
 		this.nombreCompleto = LeerTeclado.leerLinea("Introduzca el nombre:");
 		this.fechaNacimiento = LeerTeclado.leerLinea("Dime Fecha Nacimiento: DD/MM/YYYY");
 		this.ciudad = LeerTeclado.leerLinea("Introduce Ciudad Residencia");
-
 	}
 }
