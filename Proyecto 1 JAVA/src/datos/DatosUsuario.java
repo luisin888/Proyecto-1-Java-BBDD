@@ -91,7 +91,7 @@ public class DatosUsuario implements iDatosUsuario {
 	}
 	
 	public void modificarUsuario() throws DAOException {
-		int id = LeerTeclado.leerInt("Dime la Id de Usuario a Eliminar: ");
+		int id = LeerTeclado.leerInt("Dime la Id de Usuario a Modificar: ");
 		modificarUsuario(id);
 	}
 	
