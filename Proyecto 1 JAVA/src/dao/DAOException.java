@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * 
- * @author Raúl 
+ * @author Raul 
  * Nombre de clase: Menu 
  * Descripcion: Menu 
  * Principal donde elegiremos una opcion 
