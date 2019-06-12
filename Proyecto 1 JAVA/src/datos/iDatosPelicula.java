@@ -26,7 +26,7 @@ public interface iDatosPelicula {
 
 	public void eliminarPelicula() throws DAOException;
 
-	public void modificarPelicula(Pelicula p) throws DAOException;
+	public void modificarPelicula(int id) throws DAOException;
 
 	public void modificarPelicula() throws DAOException;
 

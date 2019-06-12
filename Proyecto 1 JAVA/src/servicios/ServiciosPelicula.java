@@ -48,9 +48,9 @@ public class ServiciosPelicula implements iServiciosPelicula {
 		datos.eliminarPelicula();
 	}
 
-	public void modificarPelicula(Pelicula p) throws DAOException {
+	public void modificarPelicula(int id) throws DAOException {
 		final Logger logger = LogManager.getLogger("Mensaje");
-		datos.modificarPelicula(p);
+		datos.modificarPelicula(id);
 	}
 
 	public void modificarPelicula() throws DAOException {

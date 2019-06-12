@@ -22,7 +22,7 @@ public interface iServiciosPelicula {
 	public void eliminarPelicula(int id) throws DAOException;
 	public void eliminarPelicula() throws DAOException;
 
-	public void modificarPelicula(Pelicula p) throws DAOException;
+	public void modificarPelicula(int id) throws DAOException;
 	public void modificarPelicula() throws DAOException;
 
 	public void listado() throws SQLException;

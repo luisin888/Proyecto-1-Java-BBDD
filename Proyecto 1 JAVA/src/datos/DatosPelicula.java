@@ -52,6 +52,7 @@ public class DatosPelicula implements iDatosPelicula {
 	}
 
 	public Pelicula encontrarPelicula(int id) throws DAOException {
+		
 		final Logger logger = LogManager.getLogger("Mensaje");
 		Pelicula p = new Pelicula();
 		try (Statement stmt = con.createStatement()) {
@@ -87,11 +88,17 @@ public class DatosPelicula implements iDatosPelicula {
 		eliminarPelicula(id);
 	}
 
-	public void modificarPelicula(Pelicula p) throws DAOException {
+	public void modificarPelicula(int id) throws DAOException {
 		final Logger logger = LogManager.getLogger("Mensaje");
+		Pelicula p = encontrarPelicula(id);
+		p.setNombre(LeerTeclado.leerLinea("Dime la nueva pelicula: "));
+		p.setAnioEstreno(LeerTeclado.leerInt("Dime el año del estreno: "));
+		p.setCategoria(LeerTeclado.leerInt("Categoria: Policiaca(1) - Romantica(2) - Aventura (3) - Comedia (4) - Animaci�n (5) - Thriller (6)"));
+		
 		try (Statement stmt = con.createStatement()) {
-			String query = "UPDATE peliculas SET nombrepeli='" + p.getNombre() + "'," + " SET anno"+
-					"'"+ p.getAnioEstreno() + "', SET categoria '" + p.getCategoria()+"'";
+			
+			String query = "UPDATE peliculas SET nombrepeli= '" + p.getNombre() + "'," + "anno= '"
+					+ p.getAnioEstreno() + "', categoria= '" + p.getCategoria()+ "'" + " WHERE id_pelicula=" + id;
 			if (stmt.executeUpdate(query) != 1) {
 				throw new DAOException("Error updating film");
 			}
@@ -102,7 +109,8 @@ public class DatosPelicula implements iDatosPelicula {
 	}
 
 	public void modificarPelicula() throws DAOException {
-
+		int id = LeerTeclado.leerInt("Dime la Id de la Pelicula a Modificar: ");
+		modificarPelicula(id);
 	}
 
 	public void listado() throws SQLException {

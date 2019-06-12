@@ -8,7 +8,7 @@ import org.apache.logging.log4j.Logger;
  * 
  * @author Andrea
  * Nombre de clase: ConexionDB 
- * Descripcion: Conexión con base de datos
+ * Descripcion: Conexiï¿½n con base de datos
  * Fecha: 10/06/2019 
  * @version: v1.0
  *
@@ -70,8 +70,8 @@ public class Pelicula {
 		final Logger logger = LogManager.getLogger("Mensaje");
 		int num = 0;
 		this.nombre = LeerTeclado.leerLinea("Introduzca el nombre:");
-		this.anioEstreno = LeerTeclado.leerInt("Introduzca el año");
+		this.anioEstreno = LeerTeclado.leerInt("Introduzca el aï¿½o");
 		this.categoria = LeerTeclado.leerInt(
-				"Categoría: Policiaca(1) - Romantica(2) - Aventura (3) - Comedia (4) - Animación (5) - Thriller (6()");
+				"Categorï¿½a: Policiaca(1) - Romantica(2) - Aventura (3) - Comedia (4) - Animaciï¿½n (5) - Thriller (6)");
 	}
 }
