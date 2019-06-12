@@ -1,6 +1,8 @@
 package modelo;
 
 import utilidades.LeerTeclado;
+
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -20,10 +22,12 @@ public class Pelicula {
 	public Pelicula() {
 		super();
 		final Logger logger = LogManager.getLogger("Mensaje");
+		logger.log(Level.INFO,"Estamos dentro de constructor vacio pelicula");
 	}
 
 	public Pelicula(String nombre, int anioEstreno, int categoria) {
 		final Logger logger = LogManager.getLogger("Mensaje");
+		logger.log(Level.INFO,"Estamos dentro de constructor pelicula con parametros.");
 		this.nombre = nombre;
 		this.anioEstreno = anioEstreno;
 		this.categoria = categoria;
@@ -31,30 +35,37 @@ public class Pelicula {
 
 	public String getNombre() {
 		final Logger logger = LogManager.getLogger("Mensaje");
+		logger.log(Level.INFO,"Devolviendo el nombre de la pelicula...");
 		return nombre;
 	}
 
 	public void setNombre(String nombre) {
 		final Logger logger = LogManager.getLogger("Mensaje");
+		logger.log(Level.INFO,"Estableciendo el nombre de la pelicula...");
 		this.nombre = nombre;
 	}
 
 	public int getAnioEstreno() {
+		final Logger logger = LogManager.getLogger("Mensaje");
+		logger.log(Level.INFO,"Devolviendo el año de estreno de la pelicula...");
 		return anioEstreno;
 	}
 
 	public void setAnioEstreno(int anioEstreno) {
 		final Logger logger = LogManager.getLogger("Mensaje");
+		logger.log(Level.INFO,"Estableciendo el año de estreno de la pelicula...");
 		this.anioEstreno = anioEstreno;
 	}
 
 	public int getCategoria() {
 		final Logger logger = LogManager.getLogger("Mensaje");
+		logger.log(Level.INFO,"Devolviendo la categoria en la que esta la pelicula...");
 		return categoria;
 	}
 
 	public void setCategoria(int categoria) {
 		final Logger logger = LogManager.getLogger("Mensaje");
+		logger.log(Level.INFO,"Estableciendo la categoria en la que esta la pelicula...");
 		this.categoria = categoria;
 	}
 
@@ -66,6 +77,7 @@ public class Pelicula {
 
 	public void crearPelicula() {
 		final Logger logger = LogManager.getLogger("Mensaje");
+		logger.log(Level.INFO,"Creando nueva pelicula...");
 		int num = 0;
 		this.nombre = LeerTeclado.leerLinea("Introduzca el nombre:");
 		this.anioEstreno = LeerTeclado.leerInt("Introduzca el a�o");
