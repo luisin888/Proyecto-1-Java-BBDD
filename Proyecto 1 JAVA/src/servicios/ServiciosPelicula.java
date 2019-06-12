@@ -5,7 +5,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import dao.DAOException;
 import datos.DatosPelicula;
-import datos.iDatosPelicula;
 import servicios.iServiciosPelicula;
 import modelo.Pelicula;
 

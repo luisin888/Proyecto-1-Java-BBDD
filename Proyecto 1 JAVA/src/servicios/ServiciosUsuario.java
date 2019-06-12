@@ -6,7 +6,6 @@ import org.apache.logging.log4j.Logger;
 import servicios.iServiciosUsuario;
 import dao.DAOException;
 import datos.DatosUsuario;
-import datos.iDatosUsuario;
 import modelo.Usuario;
 
 /**
