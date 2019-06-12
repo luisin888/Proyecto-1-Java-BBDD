@@ -79,8 +79,8 @@ public class DatosUsuario implements iDatosUsuario {
 		final Logger logger = LogManager.getLogger("Mensaje");
 		Usuario u = encontrarUsuario(id);
 		try (Statement stmt = con.createStatement()) {
-			String query = "UPDATE usuarios" + "SET nombrecompleto='" + u.getNombreCompleto() + "'," + "SET fecha_nac"
-					+ u.getFechaNacimiento() + "'," + "SET ciudad_residencia" + u.getCiudad();
+			String query = "UPDATE usuarios" + "SET nombrecompleto='" + u.getNombreCompleto() + "'," + "SET fecha_nac" + "'"
+					+ u.getFechaNacimiento() + "'," + "SET ciudad_residencia"+"'" + u.getCiudad()+"'";
 			if (stmt.executeUpdate(query) != 1) {
 				throw new DAOException("Error updating usuario");
 			}
