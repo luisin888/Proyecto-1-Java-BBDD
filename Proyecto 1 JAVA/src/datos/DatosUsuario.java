@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -77,14 +78,20 @@ public class DatosUsuario implements iDatosUsuario {
 	
 	public void modificarUsuario(int id) throws DAOException {
 		final Logger logger = LogManager.getLogger("Mensaje");
+		logger.log(Level.INFO,"asdsadasdasd");
 		Usuario u = encontrarUsuario(id);
+		u.setNombreCompleto(LeerTeclado.leerLinea("Dame el nombre"));
+		u.setFechaNacimiento(LeerTeclado.leerLinea("Dame la Fecha"));
+		u.setCiudad(LeerTeclado.leerLinea("Dame la ciudad"));
 		try (Statement stmt = con.createStatement()) {
+			logger.log(Level.INFO,u.getNombreCompleto());
 			String query = "UPDATE usuarios SET nombrecompleto= '" + u.getNombreCompleto() + "'," + "fecha_nac= '"
 					+ u.getFechaNacimiento() + "', ciudad_residencia= '" + u.getCiudad()+ "'" + " WHERE id_usuario=" + id;
 			if (stmt.executeUpdate(query) != 1) {
 				throw new DAOException("Error updating usuario");
 			}
 		} catch (SQLException se) {
+			logger.log(Level.INFO,"catch");
 			throw new DAOException("Error updating usuario in DAO", se);
 		}
 
