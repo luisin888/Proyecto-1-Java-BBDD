@@ -90,8 +90,8 @@ public class DatosPelicula implements iDatosPelicula {
 	public void modificarPelicula(Pelicula p) throws DAOException {
 		final Logger logger = LogManager.getLogger("Mensaje");
 		try (Statement stmt = con.createStatement()) {
-			String query = "UPDATE peliculas" + "SET nombrepeli='" + p.getNombre() + "'," + "SET anno"
-					+ p.getAnioEstreno() + "'," + "SET categoria" + p.getCategoria();
+			String query = "UPDATE peliculas SET nombrepeli='" + p.getNombre() + "'," + " SET anno"+
+					"'"+ p.getAnioEstreno() + "', SET categoria '" + p.getCategoria()+"'";
 			if (stmt.executeUpdate(query) != 1) {
 				throw new DAOException("Error updating film");
 			}
