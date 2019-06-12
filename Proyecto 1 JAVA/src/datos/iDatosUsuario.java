@@ -6,7 +6,7 @@ import dao.DAOException;
 import modelo.Usuario;
 
 /**
- * @autor David
+ * @author David
  * Nombre de la clase: iDatosUsuario
  * Descripcion: Clase DatosUsuario donde hacemos los métodos para
  * 				añadir usuario, modificar usuarios, eliminar usuarios y listar usuarios
