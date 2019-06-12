@@ -5,11 +5,8 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * 
- * @author Raúl 
- * Nombre de clase: Menu 
- * Descripcion: Menu 
- * Principal donde elegiremos una opcion 
- * Fecha: 11/06/2019 
+ * @author Raï¿½l Nombre de clase: Menu Descripcion: Menu Principal donde
+ *         elegiremos una opcion Fecha: 11/06/2019
  * @version: v1.0
  *
  */

@@ -36,8 +36,8 @@ public class DatosPelicula implements iDatosPelicula {
 		final Logger logger = LogManager.getLogger("Mensaje");
 		try (Statement stmt = con.createStatement()) {
 			System.out.println("eeEEEEE");
-			String query = "INSERT INTO peliculas(nombrepeli,anno,categoria) VALUES ('" + p.getNombre() + "'," + "'" + p.getAnioEstreno() + "',"
-					+ "'" + p.getCategoria() + "')";
+			String query = "INSERT INTO peliculas(nombrepeli,anno,categoria) VALUES ('" + p.getNombre() + "'," + "'"
+					+ p.getAnioEstreno() + "'," + "'" + p.getCategoria() + "')";
 			System.out.println(query);
 			if (stmt.executeUpdate(query) != 1) {
 				throw new DAOException("Error adding films");
@@ -52,14 +52,14 @@ public class DatosPelicula implements iDatosPelicula {
 	}
 
 	public Pelicula encontrarPelicula(int id) throws DAOException {
-		
+
 		final Logger logger = LogManager.getLogger("Mensaje");
 		Pelicula p = new Pelicula();
 		try (Statement stmt = con.createStatement()) {
 			String query = "SELECT * FROM peliculas WHERE id_pelicula=" + id;
 			ResultSet rs = stmt.executeQuery(query);
 			if (rs.next()) {
-				 p = new Pelicula(rs.getString("nombrepeli"), rs.getInt("anno"), rs.getInt("categoria"));
+				p = new Pelicula(rs.getString("nombrepeli"), rs.getInt("anno"), rs.getInt("categoria"));
 			}
 		} catch (SQLException se) {
 			throw new DAOException("Error finding film in DAO", se);
@@ -84,7 +84,7 @@ public class DatosPelicula implements iDatosPelicula {
 	}
 
 	public void eliminarPelicula() throws DAOException {
-		int id=LeerTeclado.leerInt("dime la id a eliminar");
+		int id = LeerTeclado.leerInt("dime la id a eliminar");
 		eliminarPelicula(id);
 	}
 
@@ -93,12 +93,13 @@ public class DatosPelicula implements iDatosPelicula {
 		Pelicula p = encontrarPelicula(id);
 		p.setNombre(LeerTeclado.leerLinea("Dime la nueva pelicula: "));
 		p.setAnioEstreno(LeerTeclado.leerInt("Dime el año del estreno: "));
-		p.setCategoria(LeerTeclado.leerInt("Categoria: Policiaca(1) - Romantica(2) - Aventura (3) - Comedia (4) - Animaci�n (5) - Thriller (6)"));
-		
+		p.setCategoria(LeerTeclado.leerInt(
+				"Categoria: Policiaca(1) - Romantica(2) - Aventura (3) - Comedia (4) - Animaci�n (5) - Thriller (6)"));
+
 		try (Statement stmt = con.createStatement()) {
-			
-			String query = "UPDATE peliculas SET nombrepeli= '" + p.getNombre() + "'," + "anno= '"
-					+ p.getAnioEstreno() + "', categoria= '" + p.getCategoria()+ "'" + " WHERE id_pelicula=" + id;
+
+			String query = "UPDATE peliculas SET nombrepeli= '" + p.getNombre() + "'," + "anno= '" + p.getAnioEstreno()
+					+ "', categoria= '" + p.getCategoria() + "'" + " WHERE id_pelicula=" + id;
 			if (stmt.executeUpdate(query) != 1) {
 				throw new DAOException("Error updating film");
 			}

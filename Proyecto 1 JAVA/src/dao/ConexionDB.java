@@ -8,10 +8,8 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * 
- * @author Raúl 
- * Nombre de clase: ConexionDB 
- * Descripcion: Conexión con base de datos
- * Fecha: 10/06/2019 
+ * @author Raï¿½l Nombre de clase: ConexionDB Descripcion: Conexiï¿½n con base de
+ *         datos Fecha: 10/06/2019
  * @version: v1.0
  *
  */

@@ -10,10 +10,8 @@ import modelo.Pelicula;
 
 /**
  * 
- * @author Raul
- * Nombre de clase: ConexionDB 
- * Descripcion: Conexi�n con base de datos
- * Fecha: 10/06/2019 
+ * @author Raul Nombre de clase: ConexionDB Descripcion: Conexi�n con base de
+ *         datos Fecha: 10/06/2019
  * @version: v1.0
  *
  */
