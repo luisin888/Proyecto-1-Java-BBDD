@@ -1,10 +1,7 @@
 package modelo;
 
-import java.util.Date;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import java.text.SimpleDateFormat;
-import java.text.ParseException;
 import utilidades.LeerTeclado;
 
 /**

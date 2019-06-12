@@ -2,7 +2,6 @@ package control;
 
 import dao.DAOException;
 import java.sql.SQLException;
-import servicios.iServiciosPelicula;
 import servicios.ServiciosPelicula;
 import servicios.ServiciosUsuario;
 import modelo.Pelicula;
