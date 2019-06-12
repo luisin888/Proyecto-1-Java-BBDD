@@ -3,6 +3,8 @@ package dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -26,6 +28,7 @@ public class ConexionDB {
 
 	public ConexionDB() {
 		final Logger logger = LogManager.getLogger("Mensaje");
+		logger.log(Level.INFO,"Conectamos con base de datos");
 		try {
 			Class.forName(driverClassName);
 			connection = DriverManager.getConnection(driverUrl, user, password);

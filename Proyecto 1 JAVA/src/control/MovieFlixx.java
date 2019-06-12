@@ -10,6 +10,8 @@ import modelo.Usuario;
 import datos.DatosUsuario;
 import gui.Menu;
 import utilidades.LeerTeclado;
+
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -33,10 +35,12 @@ public class MovieFlixx {
 
 		super();
 		final Logger logger = LogManager.getLogger("Mensaje");
+		logger.log(Level.INFO,"Constructor vacío MovieFlixx");
 	}
 
 	public void seleccionarOpcion() throws SQLException, DAOException {
 		final Logger logger = LogManager.getLogger("Mensaje");
+		logger.log(Level.INFO,"Seleccionamos Opcion del Menu");
 		Menu m = new Menu();
 		m.mostrarMenu();
 		LeerTeclado leer = new LeerTeclado();
@@ -131,7 +135,9 @@ public class MovieFlixx {
 	}
 
 	public int leerOpcion() {
+		
 		final Logger logger = LogManager.getLogger("Mensaje");
+		logger.log(Level.INFO,"Se va a leer un dato");
 		LeerTeclado leer = new LeerTeclado();
 		int opc = leer.leerInt();
 		return opc;

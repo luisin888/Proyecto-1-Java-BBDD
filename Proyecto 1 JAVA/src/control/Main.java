@@ -4,7 +4,7 @@ import java.sql.SQLException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
+import org.apache.logging.log4j.Level;
 //import datos.DatosPelicula;
 //import datos.DatosUsuario;
 //import modelo.Pelicula;
@@ -19,9 +19,11 @@ import dao.DAOException;
  *
  */
 public class Main {
-	final Logger logger = LogManager.getLogger("Mensaje");
+	
 
 	public static void main(String[] args) throws SQLException, DAOException {
+		final Logger logger = LogManager.getLogger("Mensaje");
+		logger.log(Level.INFO,"Se va a ejecutar el Menu Principal");
 		MovieFlixx movie = new MovieFlixx();
 		movie.seleccionarOpcion();
 	}
