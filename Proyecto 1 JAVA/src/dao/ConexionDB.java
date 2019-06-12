@@ -10,8 +10,15 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * 
+<<<<<<< HEAD
+ * @author Raul 
+ * Nombre de clase: ConexionDB 
+ * Descripcion: Conexi�n con base de datos
+ * Fecha: 10/06/2019 
+=======
  * @author Ra�l Nombre de clase: ConexionDB Descripcion: Conexi�n con base de
  *         datos Fecha: 10/06/2019
+>>>>>>> branch 'master' of https://github.com/luisin888/Proyecto-1-Java-BBDD.git
  * @version: v1.0
  *
  */
