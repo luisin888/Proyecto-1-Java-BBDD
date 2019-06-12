@@ -78,7 +78,7 @@ public class DatosUsuario implements iDatosUsuario {
 	
 	public void modificarUsuario(int id) throws DAOException {
 		final Logger logger = LogManager.getLogger("Mensaje");
-		logger.log(Level.INFO,"asdsadasdasd");
+		logger.log(Level.INFO,"");
 		Usuario u = encontrarUsuario(id);
 		u.setNombreCompleto(LeerTeclado.leerLinea("Dame el nombre"));
 		u.setFechaNacimiento(LeerTeclado.leerLinea("Dame la Fecha"));
